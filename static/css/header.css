@@ -1,4 +1,5 @@
 .social-icons .header-links {display: table;}
 .social-icons .header-links li {list-style:none;display: table-cell;padding: 0 5px;}
+.social-icons .header-links li:first-child {padding:0;}
 .social-icons .header-links li a {width: 20px;display: block;}
 .social-icons .header-links li a img {width:100%;}
