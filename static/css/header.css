@@ -12,3 +12,4 @@
 .menu ul li a:hover {border-bottom:1px solid #000;}
 .menu-ul .sub-ul{display: none;}
 .menu-ul .sub-ul.active {display: block;}
+.menu .menu-ul .menu-li {padding:5px 0;}
