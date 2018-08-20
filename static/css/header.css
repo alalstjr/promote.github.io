@@ -13,3 +13,7 @@
 .menu-ul .sub-ul{display: none;}
 .menu-ul .sub-ul.active {display: block;}
 .menu .menu-ul .menu-li {padding:5px 0;}
+
+@media all and (max-wdith:480px){
+  .menu {margin-bottom:35px;}
+}
