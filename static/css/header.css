@@ -7,6 +7,6 @@
 .social-icons .header-links li a img {width:100%;}
 
 .menu-ul {width:100%;}
-.menu ul li {font-size:20px;}
+.menu ul li {font-size:20px;curser:pointer;}
 .menu ul li a {border-bottom:1px solid transparent;}
 .menu ul li a:hover {border-bottom:1px solid #000;}
