@@ -69,7 +69,8 @@ p.info a {
     list-style: none;
 }
 
-.menu ul li a:hover, .menu ul li a:focus, li.current-menu-item > a{
+
+:hover, .menu ul li a:focus, li.current-menu-item > a{
     background: #007D72;
 }
 li.current-menu-item:before {
@@ -88,7 +89,7 @@ li.current-menu-item:before {
     cursor: pointer;
     display: block;
     text-decoration: none;
-    padding: 0 0 0 10px;
+    padding: 5px 0 5px 15px;
     color: #333;
 }
 .home-subtitle {
