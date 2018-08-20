@@ -90,7 +90,7 @@ li.current-menu-item:before {
     display: block;
     text-decoration: none;
     padding: 0 0 0 10px;
-    color: #fff;
+    color: #333;
 }
 .home-subtitle {
     font-size: 26px;
