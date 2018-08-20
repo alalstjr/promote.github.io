@@ -8,3 +8,4 @@
 
 .menu-ul {width:100%;}
 .menu ul li {font-size:20px;}
+.menu ul li a:hover {border-bottom:1px solid #000;}
