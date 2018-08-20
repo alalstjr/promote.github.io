@@ -1,5 +1,9 @@
 (function($){
 	$(document).ready(function(){
-		//Empty space. Fill this with your site specific JS code
+		$('.menu-ul .menu-li').on('click',function(){
+			var index = $(this).index();
+			$('.menu-ul .sub-ul').removeClass('active');
+			$('.menu-ul .sub-ul').eq(index).addClass('active');
+		});
 	});
 })(jQuery);
