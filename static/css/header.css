@@ -1,3 +1,5 @@
+#header {padding:30px 0;}
+
 .social-icons .header-links {display: table;}
 .social-icons .header-links li {list-style:none;display: table-cell;padding: 0 5px;}
 .social-icons .header-links li:first-child {padding-left:0;}
