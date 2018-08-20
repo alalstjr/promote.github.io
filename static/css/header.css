@@ -14,7 +14,7 @@
 .menu-ul .sub-ul.active {display: block;}
 .menu .menu-ul .menu-li {padding:5px 0;}
 
-@media all and (max-wdith:480px){
+@media all and (max-width:767px){
   .menu {margin-bottom:35px;}
   #header .searchcontrol {margin-top:10px;}
   .main.outer {padding-top:0;}
