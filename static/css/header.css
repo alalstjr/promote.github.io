@@ -16,4 +16,5 @@
 
 @media all and (max-wdith:480px){
   .menu {margin-bottom:35px;}
+  #header .searchcontrol {margin-top:10px;}
 }
