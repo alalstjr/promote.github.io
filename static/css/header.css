@@ -5,3 +5,6 @@
 .social-icons .header-links li:first-child {padding-left:0;}
 .social-icons .header-links li a {width: 20px;display: block;}
 .social-icons .header-links li a img {width:100%;}
+
+.menu-ul {width:100%;}
+.menu ul li {font-size:20px;}
