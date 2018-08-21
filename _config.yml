@@ -1,12 +1,12 @@
-title: John Smith
+title: Min Seok
 description: My Personal Blog
-author: John Smith
+author: Min Seok
 logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
+github: https://alalstjr.github.io/promote.github.io/
 about: Freelance developer
 
-baseurl: "https://codeasashu.github.io/hcz-jekyll-blog"
-url: "https://codeasashu.github.io/hcz-jekyll-blog"
+baseurl: "https://alalstjr.github.io/promote.github.io/"
+url: "https://alalstjr.github.io/promote.github.io/"
 
 allowsearch: true
 
