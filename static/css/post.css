@@ -1,4 +1,5 @@
 .post .title {margin-bottom:36px;font-size:36px;}
+.post .box {margin-bottom:30px;}
 .post .box p {margin-bottom:7px;}
 
 @media all and (max-width:480px){
