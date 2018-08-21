@@ -9,6 +9,15 @@
 과학자 <strong>"이렇게 멋지게 만든 로봇이 움직일수 있다면 더좋을텐데.."</strong> <br/>
 자신이 만든 로봇이 역동적이게 움직일수 있게 도와준것이 <strong>Javascript</strong> 입니다. <br/>
 
+위의 예제 처럼 <strong>Javascript 는 정적인적을 동적으로 만들어주는 언어</strong>입니다.
 
+좀더 자세하게 들어가 보도록 하겠습니다.
+
+HTML 에서의 Javascript 는 일반적으로 홈페이지는 HTML 구조를 작업해주고 CSS는 화면의 보여지는 것
+텍스트의 글자색상 배경이라던가 버튼에 hover 했을경우 모션 변경이라던가 이런 보여지는것은 CSS가 작업합니다.
+
+<strong>Javascript</strong> 는 인터랙션 이다.
+사용자와 상호작용 합니다. 사용자가 요구하면 그것을 들어주며 실행하게 도와주는것 입니다.
+<strong>Javascript</strong> 를 사용하지 않고서는 Click Moseover drage... 등등 
 
 {% highlight ruby %} ㅁㄴㅇㅁㄴㅇ {% endhighlight %}
