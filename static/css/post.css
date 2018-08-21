@@ -1,5 +1,5 @@
 .post .title {margin-bottom:36px;font-size:36px;}
-.post p {margin-bottom:8px;}
+.post p {margin-bottom:7px;}
 
 @media all and (max-width:480px){
   .post .title {font-size:26px;}
