@@ -1,0 +1,5 @@
+.post .title {margin-bottom:36px;font-size:36px;}
+
+@media all and (max-width:480px){
+  .post .title {font-size:26px;}
+}
