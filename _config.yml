@@ -2,11 +2,11 @@ title: Min Seok
 description: My Personal Blog
 author: Min Seok
 logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://alalstjr.github.io/promote.github.io/
+github: https://alalstjr.github.io/promote.github.io
 about: Freelance developer
 
-baseurl: "https://alalstjr.github.io/promote.github.io/"
-url: "https://alalstjr.github.io/promote.github.io/"
+baseurl: "https://alalstjr.github.io/promote.github.io"
+url: "https://alalstjr.github.io/promote.github.io"
 
 allowsearch: true
 
