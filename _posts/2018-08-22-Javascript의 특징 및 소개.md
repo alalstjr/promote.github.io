@@ -24,7 +24,7 @@
   <p>그러다보니 컴파일형언어 보다는 느린 언어라는것을 알아야 합니다.</p>
 </div>
 <div class="box">
-  <div class="small-title">주로 웹 페이지를 위한 스크립팅 언어로 알려져 있습니다. 
+  <div class="small-title">주로 웹 페이지를 위한 스크립팅 언어로 알려져 있습니다.</div>
   <p>최근에는 클라이언트사이드가 아니라 서버사이드 언어로 Javascript 가 사용되고 있습니다. 바로 유명한 <a href="https://ko.wikipedia.org/wiki/Node.js">Node.js</a> 입니다. Javascript 를 알고있다면 미래에 백엔드 분야로 진출할때 보다 쉽게 접근할 수 있습니다.)</p>
 </div>
 <div class="box">
