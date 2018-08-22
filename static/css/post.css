@@ -2,6 +2,8 @@
 .post .box {margin-bottom:30px;}
 .post .box p {margin-bottom:7px;}
 
+.post .small-title {font-size: 24px;margin-bottom: 15px;font-weight: 400;}
+
 @media all and (max-width:480px){
   .post .title {font-size:26px;}
 }
