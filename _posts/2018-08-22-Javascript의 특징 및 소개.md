@@ -6,7 +6,7 @@
   <p>다른방법으로 같은 내용의 <strong>Javascript의 교육 문서를 볼수있는 자료</strong>가 필요했습니다.</p>
   <p>바로 책이아닌 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript" target="_blank">MDN 웹 문서</a> 입니다.</p>
   <p>Mozilla Developer Network는 개발자 및 기술 작가 커뮤니티가 관리하고 HTML5 , JavaScript , CSS , Web API , Node.js , WebExtensions 및        MathML 과 같은 다양한 주제에 대해 많은 문서를 호스팅하는 개발자를위한 리소스입니다 .</p>
- </div>
+</div>
 
 <div class="box">
   Javascript는 많은 내용을 가지고있는 언어입니다.
