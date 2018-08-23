@@ -21,6 +21,8 @@
 <div class="box">
   <div class="small-title"> Javascript 는 웹브라우저에서 작동하고 있습니다.</div>
   <p>사용자가 서버를통해 자료를 요청하면 서버에서 전달받은 내용(HTML , CSS , Javacript) 을 해석을 해야합니다.</p>
+  <p>Javacript 는 우선 사용자가 작성한 Javacript 프로그래밍을 보고 1차적으로 기계어로 번역하여 운영체제에 전송합니다.</p>
+  <p>운영체제에서 보내서 돌아온 응답신호를 다시 Javacript는 인간언어에 가깝게 2차적으로 번역을하여 웹상에 보여줍니다.</p>
   <p>그러다보니 컴파일형언어 보다는 느린 언어라는것을 알아야 합니다.</p>
 </div>
 <div class="box">
