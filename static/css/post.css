@@ -2,7 +2,11 @@
 .post .box {margin-bottom:30px;}
 .post .box p {margin-bottom:7px;}
 
+/*내용의 */
 .post .small-title {font-size: 24px;margin-bottom: 15px;font-weight: 400;}
+
+/*이미지 중앙정렬*/
+.post .img-box img {margin:0 auto;
 
 @media all and (max-width:480px){
   .post .title {font-size:26px;}
