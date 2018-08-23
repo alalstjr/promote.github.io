@@ -32,7 +32,9 @@
   {% highlight js %}
    Javascript는 인터프리터형 언어에 가깝다.
   {% endhighlight %}
-  <p>사용자가 javascript언어를 작성 --> 운영체제에서 javascript를 기계어로 번역하고 이해--> 다시 웹상으로 보여지게 번역하여 출력</p>
+  <div class="img-box">
+    <img src="{{ site.baseurl }}/static/img/post/2018-08-22.png" alt="자바스크립트" />
+  <div>
   <p>그러다보니 컴파일형언어 보다는 느린 언어라는것을 알아야 합니다.</p>
 </div>
 <div class="box">
