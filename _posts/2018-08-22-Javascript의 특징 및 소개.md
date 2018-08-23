@@ -29,6 +29,9 @@
   </script>
   {% endhighlight %}
   <p>이렇게 작성할경우 작성한 javascript 프로그래밍은 사라지고 작성한 글자 write 만 출력됩니다.</p>
+  {% highlight js %}
+   Javascript는 인터프리터형 언어에 가깝다.
+  {% endhighlight %}
   <p>사용자가 javascript언어를 작성 --> 운영체제에서 javascript를 기계어로 번역하고 이해--> 다시 웹상으로 보여지게 번역하여 출력</p>
   <p>그러다보니 컴파일형언어 보다는 느린 언어라는것을 알아야 합니다.</p>
 </div>
