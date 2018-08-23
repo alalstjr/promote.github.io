@@ -20,7 +20,7 @@
 </div>
 <div class="box">
   <div class="small-title"> Javascript 는 웹브라우저에서 작동하고 있습니다.</div>
-  {% highlight javascript %} var asd = asd; {% endhighlight %}
+  {% highlight js %}<script language="javascript">document.write("Javascript는 인터프리터형 언어에 가깝다.")</script>{% endhighlight %}
   
   <p>사용자가 서버를통해 자료를 요청하면 서버에서 전달받은 내용(HTML , CSS , Javacript) 을 해석을 해야합니다.</p>
   <p>Javacript 는 우선 사용자가 작성한 Javacript 프로그래밍을 보고 1차적으로 기계어로 번역하여 운영체제에 전송합니다.</p>
