@@ -34,7 +34,7 @@
   {% endhighlight %}
   <div class="img-box">
     <img src="{{ site.baseurl }}/static/img/post/2018-08-22.png" alt="자바스크립트" />
-  <div>
+  </div>
   <p>그러다보니 컴파일형언어 보다는 느린 언어라는것을 알아야 합니다.</p>
 </div>
 <div class="box">
