@@ -70,6 +70,7 @@
   <p>웹 브라우저는 한 개가 아닌 여러 개가 존재합니다.</p>
   <p>그중에서도 표준이 필요합니다. </p>
   <p>그래서 ECMA를 통해서 웹브라우저에 적합한 언어라는 표준을 받은 것이 JavaScript 언어입니다. </p>
+  <p>(<a href="https://ko.wikipedia.org/wiki/Ecma_%EC%9D%B8%ED%84%B0%EB%82%B4%EC%85%94%EB%84%90" target="_blank">Ecma 인터내셔널(영어: Ecma International)</a>은 정보와 통신 시스템을 위한 국제적이면서도 회원국 기반의 비영리 표준화 기구이다)</p>
   <p><strong>JavaScript의 표준의 명칭은 ECMAScript</strong>입니다.</p>
   <p>최근에는 <strong>ECMAScript 6 혹은 ES6</strong> 라고 부릅니다. </p>
   <p>실무에서 많이 사용되는 버전은 ECMAScript 5.1 버전입니다.</p>
