@@ -1,6 +1,7 @@
 .post .title {margin-bottom:36px;font-size:36px;}
 .post .box {margin-bottom:30px;}
 .post .box p {margin-bottom:7px;}
+.post a {border-bottom:1px solid #009688;}
 
 /*내용의 */
 .post .small-title {font-size: 24px;margin-bottom: 15px;font-weight: 400;}
