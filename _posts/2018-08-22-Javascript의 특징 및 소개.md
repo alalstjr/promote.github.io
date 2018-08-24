@@ -39,7 +39,7 @@
 </div>
 <div class="box">
   <div class="small-title">주로 웹 페이지를 위한 스크립팅 언어로 알려져 있습니다.</div>
-  <p>최근에는 클라이언트사이드가 아니라 <strong>서버사이드 언어로 JavaScript 가 사용</strong>되고 있습니다. 바로 유명한 <a href="https://ko.wikipedia.org/wiki/Node.js">Node.js</a> 입니다. JavaScript 를 알고 있다면 미래에 백엔드 분야로 진출할 때 보다 쉽게 접근할 수 있습니다)</p>
+  <p>최근에는 클라이언트사이드가 아니라 <strong>서버사이드 언어로 JavaScript 가 사용</strong>되고 있습니다. 바로 유명한 <a href="https://ko.wikipedia.org/wiki/Node.js" target="_blank">Node.js</a> 입니다. JavaScript 를 알고 있다면 미래에 백엔드 분야로 진출할 때 보다 쉽게 접근할 수 있습니다)</p>
 </div>
 <div class="box">
   <div class="small-title">JavaScript 는 프로토타입 기반의 다중 패러다임 스크립팅 언어입니다.</div>
