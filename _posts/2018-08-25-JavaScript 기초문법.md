@@ -36,3 +36,25 @@ console.log(code);
 <div class="img-box">
   <img src="{{ site.baseurl }}/static/img/post/2018-08-26-1.png" alt="자바스크립트 출력확인" />
 </div>
+ture 가 출력되는것을 확인하실 수 있습니다. (ture는 값이 존재한다는 것을 의미합니다)
+
+{% highlight javascript %}
+var code = true;
+
+console.log(COde);
+{% endhighlight %}
+하지만 이렇게 작성할경우
+
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-08-26-2.png" alt="자바스크립트 출력확인" />
+</div>
+빨간색으로 경고표시를 해주는듯한 텍스트가 나옵니다.
+출력문을 해석하면
+```markdown
+COde is not defined - COde가 정의되지 않았습니다.
+```
+저장되어있는 코드는 소문자로만 이루어져있는데
+출력하려는 코드의 네임에는 대문자가 섞여 있어서 JavaScript가 code 라는 값을 찾을수가 없어 출력할 수 없었습니다.
+
+이처럼 JavaScript에서는 대소문자 구분이 매우 중요합니다. 초보가자 많이 실수하는 것중 하나이기에 길게 설명했습니다.
+꼭 머리속에 넣어주세요.
