@@ -10,12 +10,12 @@
 여러가지 언어를 작성하고 저장하며 코드를 작성하게 도와주는 무료 프로그램은 많이있습니다.
 (대표적인 코드에디터는 : <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code - Code Editing</a> , 저는 웹 개발을 할때에는 <a href="http://brackets.io/" target="_blank">Brackets</a>을 사용중입니다.)
 이 두개 말고도 수도없이 많은 코드에디터 프로그램이 존재합니다.
-하지만 제가 작성하는 개인필기노트에서는 따로 코드에디터를 설치하고 실행할 필요가 없습니다.
+자신에게 맞는 코드에디터를 고르시고 설치하시면 충분할꺼같습니다.
 
-바로 지금 이 블로그를 보게해주는 웹 브라우저 프로그램이 있기 때문입니다.
-웹 브라우저에는 개발자 도구가 존재합니다.
+바로 지금 이 블로그를 보게해주는 웹 브라우저 프로그램에는 개발자 도구가 존재합니다.
 대표적으로 (Chrome크롬, Firefox파이어폭스, Internet Explorer익스플로러) 가 있습니다.
 저는 Chrome크롬을 사용중이기에 크롬기준으로 설명하겠습니다. 다른 개발자 도구도 전부 비슷할꺼라 생각합니다. 
+Chrome크롬 에서의 개발자도구창 여는방법은 F12버튼 or ctrl+shift+c 를 눌러주시면 바로 개발자창을 확인하실수 있습니다.
 
 오늘 참고하면서 공부할 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals" target="_blank">MDN-문법과 타입</a> 페이지 입니다.
 
@@ -86,3 +86,16 @@ JavaScript 의 주석
 제가 만든 코드를 보기쉽고 찾기 쉽게 하기위해서 자주 쓰는거 같습니다.
 제가 만든 코드를 저만보는게 아닌 다른 팀원도 많이 보기때문입니다.
 그렇기에 주석으로는 꼭 자신이 만든 코드에 설명을 작성해서 표시해줍시다.
+
+JavaScript 의 선언
+JavaScript에서 선언은 3가지 방법이 있습니다.
+
+```markdown
+var
+변수를 선언. 추가로 동시에 값을 초기화.
+let
+블록 범위(scope) 지역 변수를 선언. 추가로 동시에 값을 초기화.
+const
+읽기 전용 상수를 선언.
+```
+메모리를 저장해주는 그릇이며 선언한 변수에는 단 하나의 값만 저장됩니다.
