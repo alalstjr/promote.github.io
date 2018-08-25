@@ -7,4 +7,10 @@
 
 여러가지 언어를 작성하고 저장하며 코드를 작성하게 도와주는 무료 프로그램은 많이있습니다.
 (대표적인 코드에디터는 : <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code - Code Editing</a> , 저는 웹 개발을 할때에는 <a href="http://brackets.io/" target="_blank">Brackets</a>을 사용중입니다.)
-이 두개 말고도 
+이 두개 말고도 수도없이 많은 코드에디터 프로그램이 존재합니다.
+하지만 제가 작성하는 개인필기노트에서는 따로 코드에디터를 설치하고 실행할 필요가 없습니다.
+
+바로 지금 이 블로그를 보게해주는 웹 브라우저 프로그램이 있기 때문입니다.
+웹 브라우저에는 개발자 도구가 존재합니다.
+대표적으로 (Chrome크롬, Firefox파이어폭스, Internet Explorer익스플로러) 가 있습니다.
+저는 Chrome크롬을 사용중이기에 크롬기준으로 설명하겠습니다. 다른 개발자 도구도 전부 비슷할꺼라 생각합니다. 
