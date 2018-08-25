@@ -31,3 +31,8 @@ var code = true;
 
 console.log(code);
 {% endhighlight %}
+이렇게 작성할경우
+
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-08-26-1.png" alt="자바스크립트 출력확인" />
+</div>
