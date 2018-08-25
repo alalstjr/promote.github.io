@@ -98,4 +98,16 @@ let
 const
 읽기 전용 상수를 선언.
 ```
-메모리를 저장해주는 그릇이며 선언한 변수에는 단 하나의 값만 저장됩니다.
+메모리를 저장(참조:reference,할당:assignment)해주는 그릇이며 선언한 변수에는 단 하나의 값만 저장됩니다.
+
+메모리를 할당 하는 모습을 코드로 바로 확인해보고 이해해보도록 하겠습니다.
+{% highlight javascript %}
+console.log('값을 출력합니다.');
+{% endhighlight %}
+이렇게 작성할경우 console.log 안에있는 텍스트는 한번 출력되고 메모리는 저장되지 않습니다. 
+
+{% highlight javascript %}
+var date = '값을 출력합니다.';
+console.log(date);
+{% endhighlight %}
+이렇게 변수(var) 에 할당하여 사용할 경우 date 라는 그릇에 메모리를 담아  사용할수있습니다.
