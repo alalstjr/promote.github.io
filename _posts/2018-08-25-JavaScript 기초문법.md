@@ -26,7 +26,7 @@ JavaScript는 대소문자를 구별합니다.
 JavaScript는 HTML과 CSS와는 다르게 대소문자를 엄격하게 구별합니다.
 직접 작성해 보고 결과의 차이를 확인해 보면서 머리속에 확실하게 넣어줍니다.
 
-{% highlight ruby %}
+{% highlight javascript %}
 var code = true;
 
 console.log(code);
