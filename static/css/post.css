@@ -9,7 +9,8 @@
 /*이미지 중앙정렬*/
 .post .img-box img {margin:0 auto;}
 
-.pro-txt {padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f6f8fa; border-radius: 3px;} 
+.pro-txt {padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f6f8fa; border-radius: 3px;margin:10px 0;} 
+.pro-txt p:last-child {margin:0;}
   
 @media all and (max-width:480px){
   .post .title {font-size:26px;}
