@@ -63,7 +63,6 @@
   </div>
   <div class="small-title">JavaScript 의 주석</div>
   ```markdown
-  ![my alternate text]
   // 한 줄 주석
 
   /* 이건 더 긴,
