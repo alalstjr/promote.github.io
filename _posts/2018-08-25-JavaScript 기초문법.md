@@ -53,7 +53,7 @@
   <p>출력문을 해석하면</p>
   <div class="pro-txt">
     <p>COde is not defined - COde가 정의되지 않았습니다.</p>
-  <</div>
+  </div>
   <p>저장되어있는 코드는 소문자로만 이루어져있는데</p>
   <p>출력하려는 코드의 네임에는 대문자가 섞여 있어서 JavaScript가 code 라는 값을 찾을수가 없어 출력할 수 없었습니다.</p>
 
