@@ -7,7 +7,7 @@
 .post .small-title {font-size: 24px;margin-bottom: 15px;font-weight: 400;}
 
 /*이미지 중앙정렬*/
-.post .img-box img {margin:0 auto;
+.post .img-box img {margin:0 auto;}
 
 .pro-txt {padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f6f8fa; border-radius: 3px;} 
   
