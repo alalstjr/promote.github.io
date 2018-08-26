@@ -20,10 +20,9 @@
 </div>
 <div class="box">
   <p>오늘 참고하면서 공부할 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals" target="_blank">MDN-문법과 타입</a> 페이지 입니다.</p>
-
-  <pre>
-    <p>JavaScript는 Java로부터 구문 대부분을 빌려온 것 뿐만 아니라 Awk, Perl 및 Python의 영향도 받았습니다.</p>
-    <p>JavaScript는 대소문자를 구별합니다.</p>
+  <div class="pro-txt">
+    <div>JavaScript는 Java로부터 구문 대부분을 빌려온 것 뿐만 아니라 Awk, Perl 및 Python의 영향도 받았습니다.</div>
+    <div>JavaScript는 대소문자를 구별합니다.</div>
   </pre>
   <p>JavaScript는 HTML과 CSS와는 다르게 대소문자를 엄격하게 구별합니다.</p>
   <p>직접 작성해 보고 결과의 차이를 확인해 보면서 머리속에 확실하게 넣어줍니다.</p>
@@ -52,9 +51,9 @@
   </div>
   <p>빨간색으로 경고표시를 해주는듯한 텍스트가 나옵니다.</p>
   <p>출력문을 해석하면</p>
-  <pre>
-    <p>COde is not defined - COde가 정의되지 않았습니다.</p>
-  </pre>
+  <div class="pro-txt">
+    <div>COde is not defined - COde가 정의되지 않았습니다.</div>
+  <</div>
   <p>저장되어있는 코드는 소문자로만 이루어져있는데</p>
   <p>출력하려는 코드의 네임에는 대문자가 섞여 있어서 JavaScript가 code 라는 값을 찾을수가 없어 출력할 수 없었습니다.</p>
 
@@ -92,14 +91,14 @@
 <div class="box">
   <div class="small-title">JavaScript 의 선언</div>
   <p>JavaScript에서 선언은 3가지 방법이 있습니다.</p>
-  <pre>
-    var
-    변수를 선언. 추가로 동시에 값을 초기화.
-    let
-    블록 범위(scope) 지역 변수를 선언. 추가로 동시에 값을 초기화.
-    const
-    읽기 전용 상수를 선언.
-  </pre>
+  <div class="pro-txt">
+    <div>var</div>
+    <div>변수를 선언. 추가로 동시에 값을 초기화.</div>
+    <div>let</div>
+    <div>블록 범위(scope) 지역 변수를 선언. 추가로 동시에 값을 초기화.</div>
+    <div>const</div>
+    <div>읽기 전용 상수를 선언.</div>
+  </div>
   <p>메모리를 저장(참조:reference,할당:assignment)해주는 그릇입니다.</p>
 
   <p>메모리를 할당 하는 모습을 코드로 바로 확인해보고 이해해보도록 하겠습니다.</p>
@@ -144,9 +143,9 @@
   console.log(date);
   {% endhighlight %}
   <p>이렇게 작성할 경우 변수에는 단 하나만의 값만 할당할수 있기때문에</p>  
-  <pre>
+  <div class="pro-txt">
     값을 바꿔줍니다.
-  </pre>
+  </div>
   <p>맨 마지막에 작성한 변수값만 저장하여 출력합니다.</p>
 </div>
 <div class="box">
