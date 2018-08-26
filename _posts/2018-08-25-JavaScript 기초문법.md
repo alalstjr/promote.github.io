@@ -147,9 +147,11 @@ console.log(date);
   console.log(date);
   {% endhighlight %}
   <p>이렇게 작성할 경우 변수에는 단 하나만의 값만 할당할수 있기때문에 맨 마지막에 작성한 변수값만 저장하여 출력합니다.</p>
+  
   ```markdown
   값을 바꿔줍니다.
   ```
+  
 </div>
 <div class="box">
   <div class="small-title">변수에 저장할 수 있는 데이터형</div>
