@@ -169,6 +169,7 @@
   </div>
   <p>결과를 보게되면 num 값에 Number{123} 이라는 객체를 생성한것을 볼 수 있습니다.</p>
   <p>또 그 내부에는 원시값인 PrimitiveValue 값인 123 이 존재합니다.</p>
+  <p>원시값을 구하기 위해서 매번 이렇게 길게 작성하여 구할필요는 </p>
 </div> 
 <div class="box">
   <div class="small-title">객체(Object) 데이터 유형</div>
