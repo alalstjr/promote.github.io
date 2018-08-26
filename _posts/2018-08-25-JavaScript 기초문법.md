@@ -23,7 +23,7 @@
   <div class="pro-txt">
     <div>JavaScript는 Java로부터 구문 대부분을 빌려온 것 뿐만 아니라 Awk, Perl 및 Python의 영향도 받았습니다.</div>
     <div>JavaScript는 대소문자를 구별합니다.</div>
-  </pre>
+  </div>
   <p>JavaScript는 HTML과 CSS와는 다르게 대소문자를 엄격하게 구별합니다.</p>
   <p>직접 작성해 보고 결과의 차이를 확인해 보면서 머리속에 확실하게 넣어줍니다.</p>
 
