@@ -13,18 +13,18 @@
   <p>이 두개 말고도 수도없이 많은 코드에디터 프로그램이 존재합니다.</p>
   <p>자신에게 맞는 코드에디터를 고르시고 설치하시면 충분할꺼같습니다.</p>
     
-    <p>바로 지금 이 블로그를 보게해주는 웹 브라우저 프로그램에는 개발자 도구가 존재합니다.</p>
-    <p>대표적으로 (Chrome크롬, Firefox파이어폭스, Internet Explorer익스플로러) 가 있습니다.</p>
-    <p>저는 Chrome크롬을 사용중이기에 크롬기준으로 설명하겠습니다. 다른 개발자 도구도 전부 비슷할꺼라 생각합니다. </p>
-    <p>Chrome크롬 에서의 개발자도구창 여는방법은 F12버튼 or ctrl+shift+c 를 눌러주시면 바로 개발자창을 확인하실수 있습니다.</p>
+  <p>바로 지금 이 블로그를 보게해주는 웹 브라우저 프로그램에는 개발자 도구가 존재합니다.</p>
+  <p>대표적으로 (Chrome크롬, Firefox파이어폭스, Internet Explorer익스플로러) 가 있습니다.</p>
+  <p>저는 Chrome크롬을 사용중이기에 크롬기준으로 설명하겠습니다. 다른 개발자 도구도 전부 비슷할꺼라 생각합니다. </p>
+  <p>Chrome크롬 에서의 개발자도구창 여는방법은 F12버튼 or ctrl+shift+c 를 눌러주시면 바로 개발자창을 확인하실수 있습니다.</p>
 </div>
 <div class="box">
   오늘 참고하면서 공부할 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals" target="_blank">MDN-문법과 타입</a> 페이지 입니다.
 
-  ```markdown
+```markdown
   JavaScript는 Java로부터 구문 대부분을 빌려온 것 뿐만 아니라 Awk, Perl 및 Python의 영향도 받았습니다.
   JavaScript는 대소문자를 구별합니다.
-  ```
+```
   <p>JavaScript는 HTML과 CSS와는 다르게 대소문자를 엄격하게 구별합니다.</p>
   <p>직접 작성해 보고 결과의 차이를 확인해 보면서 머리속에 확실하게 넣어줍니다.</p>
 
