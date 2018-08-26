@@ -150,16 +150,28 @@
   <p>맨 마지막에 작성한 변수값만 저장하여 출력합니다.</p>
 </div>
 <div class="box">
-  <div class="small-title">변수에 저장할 수 있는 데이터형</div>
+  <div class="small-title">변수에 저장할 수 있는 데이터 유형</div>
   <p>6가지의 원시 데이터(Primitive Data) 유형이 있습니다.</p>
   <p>문자형(String) 과 숫자형(Number) 과 논리형(Boolean) 과 Null & Undefined 와 symbol(ES6+) 들이 존재합니다.</p>
   <p>문자형(String) : 문자형은 값을 " 나 ' 로 감싸고 있습니다. '100' 일경우 숫자가아닌 문자형으로 저장됩니다.</p>
   <p>숫자형(Number) : 변수에는 오로지 숫자만 할당되어야 합니다. 100 일경우 숫자형으로 저장됩니다.</p>
   <p>논리형(Boolean) : ture참 , flase거짓 주로 두개의 값을 비교할때 나오는 결과값입니다.</p>
   <p>null & undefined : 그자체의 데이터 값입니다.</p>
+  
+  <p>숫자나 문자 논리형은 객체가 맞습니다. 다만 객체로 사용하지 않습니다.</p>
+  <p>90 이라는 숫자만 쓸경우 이것을 - 원시 데이터 값 이라고 부릅니다.</p>
+    {% highlight javascript %}
+      123;
+    {% endhighlight %}
+  <p>위 원시 데이터 값인 숫자를 객체로 생성할경우 아래처럼 작성해야 합니다.</p>
+  <div class="img-box">
+    <img src="{{ site.baseurl }}/static/img/post/2018-08-26-5.png" alt="자바스크립트 출력확인" />
+  </div>
+  <p>결과를 보게되면 num 값에 Number{123} 이라는 객체를 생성한것을 볼 수 있습니다.</p>
+  <p>또 그 내부에는 원시값인 PrimitiveValue 값인 123 이 존재합니다.</p>
 </div> 
 <div class="box">
-  <div class="small-title">객체(Object) 데이터형</div>
+  <div class="small-title">객체(Object) 데이터 유형</div>
   <p>객체에는 일반, 배열, 함수 객체가 존재합니다.</p>
   <p>이러한 객체들 을 생성하려면 만들려고 하는 함수 앞에 new 를 작성하여 객체를 생성합니다.</p>
   {% highlight javascript %}
