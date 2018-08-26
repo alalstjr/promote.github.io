@@ -151,8 +151,38 @@
 </div>
 <div class="box">
   <div class="small-title">변수에 저장할 수 있는 데이터형</div>
-  <p>문자형(String) 과 숫자형(Number) 과 논리형(Boolean) 이 존재합니다.</p>
+  <p>6가지의 원시 데이터(Primitive Data) 유형이 있습니다.</p>
+  <p>문자형(String) 과 숫자형(Number) 과 논리형(Boolean) 과 Null & Undefined 와 symbol(ES6+) 들이 존재합니다.</p>
   <p>문자형(String) : 문자형은 값을 " 나 ' 로 감싸고 있습니다. '100' 일경우 숫자가아닌 문자형으로 저장됩니다.</p>
   <p>숫자형(Number) : 변수에는 오로지 숫자만 할당되어야 합니다. 100 일경우 숫자형으로 저장됩니다.</p>
   <p>논리형(Boolean) : ture참 , flase거짓 주로 두개의 값을 비교할때 나오는 결과값입니다.</p>
+  <p>null & undefined : 그자체의 데이터 값입니다.</p>
 </div> 
+<div class="box">
+  <div class="small-title">객체(Object) 데이터형</div>
+  <p>객체에는 일반, 배열, 함수 객체가 존재합니다.</p>
+  <p>이러한 객체들 을 생성하려면 만들려고 하는 함수 앞에 new 를 작성하여 객체를 생성합니다.</p>
+  {% highlight javascript %}
+  new Function()
+  > f anonymous() {
+  
+  }     // 이름이 없는 함수가 출력
+  new Array()
+  > []  // 배열의 함수가 출력
+  new Object()
+  > {}  // 일반적인 객체 출력
+  {% endhighlight %}
+  앞에서 중요하다 언급하던것이 JavaScript 는 대소문자를 확실하게 구분한다는 것 이였습니다.
+  객체를 생성하는데 있어서도 대소문자는 매우 중요합니다.
+  {% highlight javascript %}
+  new array() // 대문자 Array() 가 아닌 소문자로 작성할경우
+  {% endhighlight %}
+  <div class="img-box">
+    <img src="{{ site.baseurl }}/static/img/post/2018-08-26-4.png" alt="자바스크립트 출력확인" />
+  </div>
+  <p>역시 오류가 출력됩니다.</p>
+  <div class="pro-txt">
+    <div>JavaScript에서 값을 나타내기 위해 리터럴을 사용한다.</div>
+    <div>스크립트에 부여한 고정값으로, 변수가 아니다.</div>
+  </div>
+</div>   
