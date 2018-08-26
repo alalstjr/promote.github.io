@@ -62,7 +62,7 @@
   <p>꼭 머리속에 넣어주세요.</p>
   </div>
   <div class="small-title">JavaScript 의 주석</div>
-  ```markdown
+  {% highlight javascript %}
   // 한 줄 주석
 
   /* 이건 더 긴,
@@ -70,7 +70,7 @@
    */
 
   /* 그러나, /* 중첩된 주석은 쓸 수 없습니다 */ SyntaxError */
-  ```
+  {% endhighlight %}
   <p>중첩된 형태로는 주석을 사용할수는 없습니다.</p>
   {% highlight javascript %}
   /*
