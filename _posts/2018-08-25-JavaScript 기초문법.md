@@ -59,7 +59,8 @@
 
   <p>이처럼 JavaScript에서는 대소문자 구분이 매우 중요합니다. 초보가자 많이 실수하는 것중 하나이기에 길게 설명했습니다.</p>
   <p>꼭 머리속에 넣어주세요.</p>
-  </div>
+</div>
+<div class="box">  
   <div class="small-title">JavaScript 의 주석</div>
   {% highlight javascript %}
   // 한 줄 주석
