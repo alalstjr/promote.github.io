@@ -135,4 +135,29 @@ var num 에는 100 이라는 문자형 데이터가 들어가 있습니다.
 
 parse 는 '해석한다' 라는 의미를 가지고 있으며 
 Int 는 'Integer = 정수', Float 는 'Float = 실수' 를 의미합니다.
-뒤에있는 10 은 10진수를 의미하며 많이 쓰는 숫자이니 
+뒤에있는 10 은 10진수를 의미하며 일반적으로 많이 사용합니다.
+
+논리형 데이터로 변경하는 경우
+{% highlight javascript %}
+  var str = 'String';
+  var num = 12345;
+  var bul = falsel;
+{% endhighlight %}
+
+논리형으로 변경하는 경우는 Boolean(str)
+{% highlight javascript %}
+  Boolean(str)
+  > true
+  
+  Boolean(num)
+  > true
+  
+  Boolean(bul)
+  > true
+  
+  !!bul
+  > true
+  
+  !str
+  > false // ! 하나는 부정을 의미합니다. (반대)
+{% endhighlight %}
