@@ -119,19 +119,20 @@ var num 에는 100 이라는 문자형 데이터가 들어가 있습니다.
 변수의 값에 문자가 포함되어있어 NaN(숫자가 아니다) 라는 구문이 출력됩니다.
 
 문자 값을 숫자로 변경할 경우
-parseInt(n,10), parseFloat(n,10) 함수 를 이용하여 데이터 형을 변경할 수 있습니다.
+<div class="pro-txt">
+	<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank">parseInt(string,radix), parseFloat(string,radix) 함수 를 이용하여 데이터 형을 변경할 수 있습니다. - MDN</a>
+</div>
 
 {% highlight javascript %}
 	var num = "100num";
-	> num;
-	> "100num"
-	
 	> parseInt(num,10)
 	> 100
-	
-	> parseFloat(num,10)
-	> 100
+
+	var num_s = "100.21num";
+	> parseFloat(num_s,10)
+	> 100.21
 {% endhighlight %}
 
 parse 는 '해석한다' 라는 의미를 가지고 있으며 
 Int 는 'Integer = 정수', Float 는 'Float = 실수' 를 의미합니다.
+뒤에있는 10 은 10진수를 의미하며 많이 쓰는 숫자이니 
