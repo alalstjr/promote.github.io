@@ -142,6 +142,9 @@ Int 는 'Integer = 정수', Float 는 'Float = 실수' 를 의미합니다.
   var str = 'String';
   var num = 12345;
   var bul = falsel;
+  var fun = function(){};
+  var list = [1,2,3];
+  var obj = {};
 {% endhighlight %}
 
 논리형으로 변경하는 경우는 Boolean(str)
@@ -155,9 +158,49 @@ Int 는 'Integer = 정수', Float 는 'Float = 실수' 를 의미합니다.
   Boolean(bul)
   > true
   
+  Boolean(fun)
+  > true // 함수도 논리형으로 인식합니다.
+  
+  Boolean(list)
+  > true // 배열도 논리형으로 인식합니다.
+  
+  Boolean(obj)
+  > true // 오브젝트도 논리형으로 인식합니다.
+  
   !!bul
   > true
   
   !str
   > false // ! 하나는 부정을 의미합니다. (반대)
+  
+  Boolean(' ')
+  > true // 공백은 참을 의미합니다.
 {% endhighlight %}
+
+논리형으로 변경하는 경우 고질적인 문제에 주의해야 합니다.
+Boolean() 에 1 을 넣어도 -1 을 넣어도 글자는 넣어도 전부 true 값을 출력했습니다.
+
+{% highlight javascript %}
+Boolean(0)
+> false
+
+0 == false
+> true
+{% endhighlight %}
+하지만 0 을 넣을 경우에는 false 를 출력하는 것을 볼 수 있으며
+0 하고 false 는 같을 수가 없는데 자바스크립트 언어에서는 둘이 같다고 출력합니다.
+또 다른 경우에는 
+{% highlight javascript %}
+Boolean(null)
+> false
+
+Boolean(undefined)
+> false
+
+Boolean('')
+> false
+{% endhighlight %}
+
+한꺼번에 모아서 정리하자면
+!!0 , !!'', !!null, !!undefined
+는 전부 false 를 출력합니다.
