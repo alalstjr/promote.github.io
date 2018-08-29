@@ -22,7 +22,7 @@
   <p>오늘 참고하면서 공부할 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals" target="_blank">MDN-문법과 타입</a> 페이지 입니다.</p>
   <div class="pro-txt">
     <p>JavaScript는 Java로부터 구문 대부분을 빌려온 것 뿐만 아니라 Awk, Perl 및 Python의 영향도 받았습니다.</p>
-    <p>JavaScript는 대소문자를 구별합니다.</p>
+    <p>JavaScript는 <strong>대소문자를 구별</strong>합니다.</p>
   </div>
   <p>JavaScript는 HTML과 CSS와는 다르게 대소문자를 엄격하게 구별합니다.</p>
   <p>직접 작성해 보고 결과의 차이를 확인해 보면서 머릿속에 확실하게 넣어줍니다.</p>
@@ -57,7 +57,7 @@
   <p>저장되어있는 코드는 소문자로만 이루어져 있는데</p>
   <p>출력하려는 코드의 네임에는 대문자가 섞여 있어서 JavaScript가 code 라는 값을 찾을 수가 없어 출력할 수 없었습니다.</p>
 
-  <p>이처럼 JavaScript에서는 대소문자 구분이 매우 중요합니다. 초보자가 많이 실수하는 것 중 하나이기에 길게 설명했습니다.</p>
+  <p>이처럼 JavaScript에서는 <strong>대소문자 구분이 매우 중요</strong>합니다. 초보자가 많이 실수하는 것 중 하나이기에 길게 설명했습니다.</p>
   <p>꼭 머릿속에 넣어주세요.</p>
 </div>
 <div class="box">  
@@ -120,9 +120,9 @@
   console.log(date);
   {% endhighlight %}
   <p>변수(var) 메모리를 할당하는 방법은 = 을 작성하여 넣어줍니다.</p>
-  <p> = 이라는 뜻은 '같다' 가 아니라 '할당해준다.' 라는 뜻으로 '넣는다, 대입한다' 라고 생각하면 될 거 같습니다.</p>
+  <p> = 이라는 뜻은 '같다' 가 아니라 <strong>'할당해준다.'</strong> 라는 뜻으로 '넣는다, 대입한다' 라고 생각하면 될 거 같습니다.</p>
   <p>이렇게 변수(var) 에 할당하여 사용할 경우 date 라는 그릇에 메모리를 담아 사용 할 수 있습니다.</p>
-  <p>이럴 경우 date 라는 변수 하나만 적는 것으로도 저장된 메모리는 재사용하기 쉽습니다.</p>
+  <p>이럴 경우 date 라는 변수 하나만 적는 것으로도 저장된 메모리는 <strong>재사용</strong>하기 쉽습니다.</p>
 </div>
 <div class="box">
   <div class="small-title">JavaScript 변수 선언 할 때의 주의할 점</div>
@@ -135,7 +135,7 @@
   <p>스네이크케이스(snake_case) : 뱀처럼 납작하다 해서 스네이크케이스라 부릅니다.</p>
   <p>두 가지 방법이 있으며 사용자마다의 취향이 있기 때문에 편한 걸로 선택하여 변수명을 작성해주면 됩니다.</p>
 
-  <p>선언한 변수에는 단 하나의 값만 저장됩니다.</p>
+  <p>선언한 변수에는 <strong>단 하나의 값만 저장</strong>됩니다.</p>
 
   {% highlight javascript %}
   var date = '값을 출력합니다.';
@@ -147,7 +147,7 @@
   <div class="pro-txt">
     값을 바꿔줍니다.
   </div>
-  <p>맨 마지막에 작성한 변수값만 저장하여 출력합니다.</p>
+  <p>맨 <strong>마지막에 작성한 변수값만 저장</strong>하여 출력합니다.</p>
 </div>
 <div class="box">
   <div class="small-title">변수에 저장할 수 있는 데이터 유형</div>
