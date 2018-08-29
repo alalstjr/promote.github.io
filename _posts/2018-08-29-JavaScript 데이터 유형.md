@@ -64,3 +64,23 @@ str 변수에 논리형 데이터 true 를 넣은다음 다시 str 출력했을�
 {% endhighlight %}
 
 결과는 문자와 숫자가 합쳐진 문자형 데이터값이 출력됩니다.
+
+이것이 매우 혼란 스러울때를 경험담(실무에서)으로 얘기해보자면
+어느 계산식에 있는 input 의 value값 을 가져와서 변수와 더해 값을 출력하는 것이였습니다. 
+하지만 왜인지 계속 NAN(숫자가 아니다) 를 출력해서 왜그런가해서 천천히 찾아보아습니다.
+{% highlight javascript %}
+      //HTML
+      <input value="100" class="num">
+    
+      //JavaScript
+			var firstNum = 100;
+			var num = $('.num').val();
+			
+			var result = firstNum + num ;
+			console.log(result);
+      
+      > 100100
+{% endhighlight %}
+value 값에는 숫자형이 아닌 문자형으로 저장되는것을 모른체 결과값을 저장했습니다.
+둘의 데이터 형이 다르기때문에 숫자형인 firstNum 값은 문자형으로 변환되어서 계산식에 들어갔습니다.
+결과 값은 200 이 아닌 100100을 출력했습니다.
