@@ -69,17 +69,17 @@ str 변수에 논리형 데이터 true 를 넣은다음 다시 str 출력했을�
 어느 계산식에 있는 input 의 value값 을 가져와서 변수와 더해 값을 출력하는 것이였습니다. 
 하지만 왜인지 계속 NaN(숫자가 아니다) 를 출력해서 왜그런가해서 천천히 찾아보아습니다.
 {% highlight javascript %}
-      //HTML
-      <input value="100" class="num">
-    
-      //JavaScript
-			var firstNum = 100;
-			var num = $('.num').val();
-			
-			var result = firstNum + num ;
-			console.log(result);
-      
-      > 100100
+  //HTML
+  <input value="100" class="num">
+
+  //JavaScript
+    var firstNum = 100;
+    var num = $('.num').val();
+
+    var result = firstNum + num ;
+    console.log(result);
+
+  > 100100
 {% endhighlight %}
 value 값에는 숫자형이 아닌 문자형으로 저장되는것을 모른체 결과값을 저장했습니다.
 둘의 데이터 형이 다르기때문에 숫자형인 firstNum 값은 문자형으로 변환되어서 계산식에 들어갔습니다.
@@ -89,21 +89,21 @@ value 값에는 숫자형이 아닌 문자형으로 저장되는것을 모른체
 해결할 방법으로 데이터 형을 변경해주는 여러가지 방법을 알아봅시다.
 var num 에는 100 이라는 문자형 데이터가 들어가 있습니다.
 {% highlight javascript %}
-	var num = "100";
-	> num
-	> "100"
-	var num = Number(num);
-	> num
-	> 100
+  var num = "100";
+  > num
+  > "100"
+  var num = Number(num);
+  > num
+  > 100
 {% endhighlight %}
 이렇게 Number() 의 함수를 사용하여 데이터형을 숫자로 바꿔주는 방법도 있으며
 {% highlight javascript %}
-	var num = "100";
-	> +num;
-	> 100
-	> num  - 0;
-	> 100
-	..* / ..곱하기 나누기 등등
+  var num = "100";
+  > +num;
+  > 100
+  > num  - 0;
+  > 100
+  ..* / ..곱하기 나누기 등등
 {% endhighlight %}
 등등 문자형에 연산식을 넣으면 숫자형으로 자동 변환 됩니다.
 실무에서 다른 사람이 만든 코드를 보았을때
@@ -112,9 +112,9 @@ var num 에는 100 이라는 문자형 데이터가 들어가 있습니다.
 
 만약에 문자형이 들어간 데이터형을 Number() 로 변환할경우 무슨일이 일어날까요?
 {% highlight javascript %}
-	var num = "num100";
-	> Number(num);
-	> NaN
+  var num = "num100";
+  > Number(num);
+  > NaN
 {% endhighlight %}
 변수의 값에 문자가 포함되어있어 NaN(숫자가 아니다) 라는 구문이 출력됩니다.
 
@@ -124,13 +124,13 @@ var num 에는 100 이라는 문자형 데이터가 들어가 있습니다.
 </div>
 
 {% highlight javascript %}
-	var num = "100num";
-	> parseInt(num,10)
-	> 100
+  var num = "100num";
+  > parseInt(num,10);
+  > 100
 
-	var num_s = "100.21num";
-	> parseFloat(num_s,10)
-	> 100.21
+  var num_s = "100.21num";
+  > parseFloat(num_s,10);
+  > 100.21
 {% endhighlight %}
 
 parse 는 '해석한다' 라는 의미를 가지고 있으며 
