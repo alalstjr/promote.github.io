@@ -78,3 +78,40 @@ boxs.length 를 활용하여 갯수를 알수 있습니다.
 
 3. class 속성 값으로 선택하는 방법
 document.getElementsByClassName('class') 
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-08-29-7.png" alt="자바스크립트" />
+</div>
+document 문서내의 찾는 class 의 목록을 불러옵니다. 
+
+4. CSS 선택자(selector) 으로 선택하는 방법
+document.querySelector('tag');
+
+{% highlight JavaScript %}
+ // HTML 
+ <div class="box" id="boxid">
+ 	<span>Hello World</span>
+ </div>
+ <div></div>
+ 
+ //JavaScript
+ var box = document.querySelector('.box span'); // 단수
+ console.log(box);
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-08-29-8.png" alt="자바스크립트" />
+</div>
+이처럼 직접 css 처럼 경로를 지정해줘서 찾을수도 있습니다.
+document.querySelector('.box:nth-child(2) span');
+여러가지 형식으로 찾을수가 있습니다.
+
+여러개의 복수 형태를 찾을 경우
+ var box = document.querySelectorAll('.box'); // 복수
+ 을 활용하여 원하는 값을 가져올 수 있습니다.
+ 가져온 결과를 보면 다른 값들하고는 다르게 표시됩니다.
+ <div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-08-29-9.png" alt="자바스크립트" />
+</div>
+이번에는 HTMLCollection 이 아닌 NodeList 를 출력하는것을 확인했습니다.
+따로 달라진것은 없습니다.
+값을 불러오는 방법도 똑같습니다.
+(이 둘의 차이점과 특징을 알아봐야겠습니다. 무엇이 다른지.. 찾아보고 바로 작성하겠습니다.)
