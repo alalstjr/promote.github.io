@@ -50,3 +50,31 @@ boxs.length 를 활용하여 갯수를 알수 있습니다.
 고유의 ID 값으로 값을 가져올 수 있습니다.
 
 
+예제를 통해서 확실하게 알아보겠습니다.
+
+{% highlight JavaScript %}
+ // HTML 
+ <div class="box" id="boxid">
+ 	<span>Hello World</span>
+ </div>
+ <div></div>
+ 
+ //JavaScript
+ var box = document.getElementsByTagName('div');
+ var hello = box.getElementsByTagName('span');
+ console.log(hello);
+{% endhighlight %}
+이렇게 작성하여 div.box 안에있는 span 값을 가져오려고 합니다.
+하지만 결과는 
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-08-29-5.png" alt="자바스크립트" />
+</div>
+오류 문구가 출력됩니다. 
+이유는 box 안에있는 div 는 여러개(복수) 이기때문에 특정 오브젝트를 지정해주어야만 찾을 수 있습니다.
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-08-29-6.png" alt="자바스크립트" />
+</div>
+이런식으로 item() 을 활용하여 특정 순서를 지정해주면 값을 가져오는것을 확인하실 수 있습니다.
+
+3. class 속성 값으로 선택하는 방법
+document.getElementsByClassName('class') 
