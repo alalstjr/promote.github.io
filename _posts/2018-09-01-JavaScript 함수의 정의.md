@@ -177,3 +177,37 @@ JavaScript 의 함수는 절차진행형 함수이기때문에 차례로 실행�
  > 30
 {% endhighlight %}
 변수 result 값에 저장이 잘 되는 모습을 확인하실 수 있습니다.
+
+외전 - 긴 문장의 코드를 나만의 함수로 만들어서 함축해 보자
+
+{% highlight javascript %}
+  // HTML
+  <div id="box" class="boxs">
+    <div class="title">안녕하세요. MIN SEOK 블로그입니다.</div>
+    <span>댓글로 응원의 한마디 작성해주세요!</span>
+  </div>
+  
+  // JavaScript
+  복수형
+  var all_obj = document.querySelectorAll('*'); // 모든 object를 불러옵니다.
+  var divs = document.querySelectorAll('div'); // 모든 div를 불러옵니다.
+  var divs_title = document.querySelectorAll('.title') // 클레스 명이 title 을 모두 불러옵니다.
+  
+  단수형
+  var box = document.querySelector('#box'); // 고유 아이디값이 box 를 불러옵니다.
+  var box_class = document.querySelector('.boxs'); // 클래스 명이 title 을 맨위 하나 불러옵니다.
+  var box_span = box_class.querySelectior('span'); // .boxs 안에있는 span 을 불러옵니다.
+{% endhighlight %}
+
+문서 객체에 접근하여 불러오는 코드를 간단하게 나열한것입니다.
+이렇게 보면 코드 길이도 길고 많이 복잡해 보입니다.
+특히 실무에서 사용할경우 객체에 접근하여 불러오는 경우가 많은데
+항상 저렇게 길게 작성하여 쓴다고 생각하면 많이 비효율적일꺼 같습니다.
+이를 함수에 담아 코드를 줄여보겠습니다.
+
+{% highlight javascript %}
+function $(selector) {
+  document.querySelectorAll(selector);
+}
+// 함수의 이름을 $ 로 만들었습니다.  
+{% endhighlight %}
