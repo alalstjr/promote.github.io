@@ -206,8 +206,22 @@ JavaScript 의 함수는 절차진행형 함수이기때문에 차례로 실행�
 이를 함수에 담아 코드를 줄여보겠습니다.
 
 {% highlight javascript %}
-function $(selector) {
-  document.querySelectorAll(selector);
-}
-// 함수의 이름을 $ 로 만들었습니다.  
+ function $(selector) {
+   return document.querySelectorAll(selector);
+ }
+ // 함수의 이름을 $ 로 만들었습니다. 
+ // 외부에서 전달인자를 받아 $ 함수에 전달합니다.
+ // 받은 전달인자를 함수 내부에서 처리한후 매개변수를 return 하여 밖으로 내보냅니다.
+ 
+ console.log($('#box'));
+ console.log(document.querySelector('#box'));
+ 
+ // 출력했을경우 결과값은 
+ // 둘은 같은 결과가 출력 됩니다.
 {% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-01-5.png" alt="자바스크립트 출력확인" />
+</div>
+
+함수를 하나 만들어 놓으면 다음에 사용할때 간단하게 $ 만 붙여 전달인자만 작성해 주면
+쉽게 오브젝트를 선택할수 있습니다.
