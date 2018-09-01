@@ -1,4 +1,4 @@
-문서의 <strong>객체(Document Objects)</strong>에 접근하는방법
+<h2 class="title">문서의 객체(Document Objects) 에 접근하는방법</h2>
 
 <div class="box">
 {% highlight JavaScript %}
