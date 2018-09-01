@@ -97,3 +97,19 @@ function name(){
    함수의 내용
 }
 이를 Code Block 이라 부릅니다.
+함수를 만들고 불러올때는 함수의 name 을 불러주면 됩니다.
+단 name() 뒤에 ()라는 가로가 필수로 들어가야 합니다.
+
+바로 예제를 들어보겠습니다.
+{% highlight javascript %}
+ function list(){
+  console.log("첫번째");
+  console.log("두번째");
+  console.log("세번째");
+ }
+ 
+ list()
+ > 첫번째
+ > 두번째
+ > 세번째
+{% endhighlight %}
