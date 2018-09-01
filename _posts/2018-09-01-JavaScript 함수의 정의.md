@@ -97,8 +97,10 @@ function name(){
    함수의 내용
 }
 이를 Code Block 이라 부릅니다.
-함수를 만들고 불러올때는 함수의 name 을 불러주면 됩니다.
+함수를 만들때에는 함수 뒤에 세미콜론(;) 을 작성하면 안됩니다.
+함수를 호출하는 방법은 함수의 name 을 작성해 주면 됩니다.
 단 name() 뒤에 ()라는 가로가 필수로 들어가야 합니다.
+함수는 여러번 호출가능합니다.
 
 바로 예제를 들어보겠습니다.
 {% highlight javascript %}
@@ -113,3 +115,59 @@ function name(){
  > 두번째
  > 세번째
 {% endhighlight %}
+JavaScript 의 함수는 절차진행형 함수이기때문에 차례로 실행되는것을 볼 수 있었습니다.
+
+함수에 이름을 작성하지 않고 사용할 경우에는 어떻게 될까요?
+{% highlight javascript %}
+ function () {
+  console.log("첫번째");
+  console.log("두번째");
+  console.log("세번째");
+ }
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-01-4.png" alt="자바스크립트 출력확인" />
+</div>
+함수에 이름이 존재하지않아 오류가 발생합니다.
+
+{% highlight javascript %}
+ var list = function () {
+  console.log("첫번째");
+  console.log("두번째");
+  console.log("세번째");
+ };
+{% endhighlight %}
+이름이 없는 함수를 변수에 참조시킨다면 오류없이 함수를 저장할 수 있습니다.
+이름이 존재하지 않는 변수에 저장된 함수가 됩니다.
+이를 함수 표현식(Function Expression) 이라 부릅니다.
+함수 표현식은 그냥 함수와 다르게 끝에 세미콜론(;) 을 작성해 주셔야합니다.
+
+함수의 전달인자(arguments)와 매개변수(parameters)
+{% highlight javascript %}
+ function sum(a, b) {
+  console.log(a + b);
+ }
+ // sum 이라는 함수 안에 a 와 b 의 값을 전달해야 합니다.
+ sum(10, 20);
+ // 이를 전달인자(arguments) 라고 부릅니다.
+ 
+ // sum 이라는 함수 안에는 a = 10, b = 20 이라는 변수가 생성됐습니다.
+ // 전달인자를 활용하여 계산식을 만들면 함수는 완성입니다.
+{% endhighlight %}
+
+위에 만들어진 함수의 결과값을 변수에 담는다면 값은 저장되지 않습니다.
+왜냐하면 만들어진 함수에는 결과를 만드는 행동은 있어도
+결과를 반환하는 행동이 없기 때문에 값을 밖으로 가져올수 없습니다.
+
+결과를 반환할려면 return 을 활용해야 합니다.
+
+{% highlight javascript %}
+ function sum(a, b) {
+  return a + b;
+ }
+ 
+ var result = sum(10, 20)
+ console.log(result);
+ > 30
+{% endhighlight %}
+변수 result 값에 저장이 잘 되는 모습을 확인하실 수 있습니다.
