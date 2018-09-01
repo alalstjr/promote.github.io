@@ -8,6 +8,7 @@
 <div class="pro-txt">
 사전적의 의미의 함수 
   <a href="https://ko.wikipedia.org/wiki/%ED%95%A8%EC%88%98_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)" target="_balnk"> - 위키백과</a>
+함수는 절차(procedure) 일을 하는 데 거쳐야 하는 일정한 차례와 방법
 함수는 대부분의 프로그래밍 언어에서 지원하는 기능으로, 하나의 큰 프로그램을 여러 부분으로 나누어주기 때문에 같은 함수를 여러 상황에서 여러 차례 호출할 수 있으며 일부분을 수정하기 쉽다는 장점을 가진다.
 </div>
 
@@ -60,8 +61,39 @@ window 는 전역 객체(global object)는 생략이 가능합니다.
 
 3. window.alert() 메서드는 지정한 내용과 확인(OK) 버튼이 있는 경고 대화 상자를 띄웁니다.
 {% highlight javascript %}
-window.alert("안녕하세요 Min Seock 블로그입니다.")
+ window.alert("안녕하세요 Min Seock 블로그입니다.")
 {% endhighlight %}
 <div class="img-box">
   <img src="{{ site.baseurl }}/static/img/post/2018-09-01-1.png" alt="자바스크립트 출력확인" />
 </div>
+
+4. window.confirm() 메소드는 옵션인 메세지와 확인과 취소 버튼으로 구성된 모달창을 화면에 보여줍니다. 
+{% highlight javascript %}
+ window.confirm("안녕하세요 Min Seock 블로그입니다.")
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-01-2.png" alt="자바스크립트 출력확인" />
+</div>
+모달창의 확인, 취소 선택에 따라 저장되는 값도 다릅니다. 
+확인을 선택할경우 true 값이 저장되고
+취소를 선택할 경우 false 값이 저장됩니다.
+이 저장된값을 활용하면 선택지 관련 함수를 만들때 많이 유용합니다.
+
+5. window.prompt() 사용자가 텍스트를 입력할 수 있도록 안내하는 메시지가 적힌 대화 상자를 띄웁니다.
+{% highlight javascript %}
+ window.prompt("안녕하세요 Min Seock 블로그입니다.")
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-01-3.png" alt="자바스크립트 출력확인" />
+</div>
+prompt() 메소드는 변수에 담아 사용할경우 사용자가 입력한 값을 저장하여 사용할 수 있습니다.
+
+지금까지는 미리 정의되어 있는 함수를 알아보았습니다.
+
+이제는 사용자가 직접 정의할 수 있는 함수에 대에 알아보겠습니다.
+
+사용자가 직접 함수를 정의할때는 우선 함수(function)을 선언해 주어야합니다.
+function name(){
+   함수의 내용
+}
+이를 Code Block 이라 부릅니다.
