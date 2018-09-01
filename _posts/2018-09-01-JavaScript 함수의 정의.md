@@ -36,7 +36,7 @@ window 는 전역 객체(global object)는 생략이 가능합니다.
 이미 window는 전체적으로 존재하기 때문입니다. 
 그리고 이를 객체가 함수를 가지고 있다해서 메소드 라고 부릅니다. 
 
-1. window.parseInt() 문자열을 정수로 변환하는 함수입니다.
+1. window.parseInt() 문자열을 정수로 변환하는 메소드입니다.
 {% highlight javascript %}
  var num = "100문자";
  // num 변수에는 "100문자" 이라는 문자가 있습니다.
@@ -47,7 +47,7 @@ window 는 전역 객체(global object)는 생략이 가능합니다.
  > 100
 {% endhighlight %}
 
-2. window.parseFloat() 문자열을 부동 소수점 숫자로 변환합니다.
+2. window.parseFloat() 문자열을 부동 소수점 숫자로 변환하는 메소드입니다.
 {% highlight javascript %}
  var num = "100.123문자";
  // num 변수에는 "100.123문자" 이라는 문자가 있습니다.
@@ -57,3 +57,11 @@ window 는 전역 객체(global object)는 생략이 가능합니다.
  num
  > 100.123
 {% endhighlight %}
+
+3. window.alert() 메서드는 지정한 내용과 확인(OK) 버튼이 있는 경고 대화 상자를 띄웁니다.
+{% highlight javascript %}
+window.alert("안녕하세요 Min Seock 블로그입니다.")
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-01-1.png" alt="자바스크립트 출력확인" />
+</div>
