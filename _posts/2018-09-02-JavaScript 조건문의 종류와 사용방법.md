@@ -12,6 +12,8 @@ JavaScript의 조건문
   
   if( state == true ){
     console.log("state는 참 입니다.");
+  } else if ( state == "다른 조건" ) {
+    console.log("state는 다른 조건입니다.");
   } else {
     console.log("state는 거짓 입니다.");
   }
@@ -19,10 +21,14 @@ JavaScript의 조건문
   // 결과는 state가 true 라는 논리형 데이터를 가지고있기 때문에 "state는 참 입니다." 를 출력합니다.
   > state는 참 입니다.
   
-  // 만약 state 가 false 이면 true 가 아니기 때문에 else 로 이동하여 "state는 거짓 입니다." 를 출력합니다.
-  var state = false;
+  // 만약 state 가 "다른 조건" 이면 "state는 다른 조건입니다." 출력하고
+  var state = "다른 조건";
+  > state는 다른 조건입니다.
   
+  // 만약 state 가 false 이면 true 도 아니고 "다른 조건" 도 아니기 때문에 else 로 이동하여 "state는 거짓 입니다." 를 출력합니다.
+  var state = false;
   > state는 거짓 입니다.
+  
 {% endhighlight %}
 
 참 or 거짓 이라는 조건을 활용하면 여러가지 갈림길이 생기고 선택지도 많이 생깁니다. 
