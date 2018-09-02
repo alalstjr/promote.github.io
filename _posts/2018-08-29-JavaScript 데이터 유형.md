@@ -108,7 +108,7 @@
 	  > num
 	  > 100
 	{% endhighlight %}
-	<p>이렇게 Number() 의 함수를 사용하여 데이터형을 숫자로 바꿔주는 방법도 있으며</p>
+	<div class="small-title">이렇게 Number() 의 함수를 사용하여 데이터형을 숫자로 바꿔주는 방법도 있으며</div>
 	{% highlight javascript %}
 	  var num = "100";
 	  > +num;
@@ -132,6 +132,9 @@
 	{% endhighlight %}
 	<p>변수의 값에 문자가 포함되어있어 NaN(숫자가 아니다) 라는 구문이 출력됩니다.</p>
 	<p>문자 값을 숫자로 변경할 경우</p>
+	
+	<div class="small-title">parseInt(string,radix), parseFloat(string,radix) 활용하기<div>
+	
 	<div class="pro-txt">
 		<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank">parseInt(string,radix), parseFloat(string,radix) 함수 를 이용하여 데이터 형을 변경할 수 있습니다. - MDN</a>
 	</div>
@@ -152,7 +155,7 @@
 	<p>Int 는 'Integer = 정수', Float 는 'Float = 실수' 를 의미합니다.</p>
 	<p>뒤에있는 10 은 10진수를 의미하며 일반적으로 많이 사용합니다.</p>
 
-	<p>논리형 데이터로 변경하는 경우</p>
+	<div class="small-title">논리형 데이터로 변경하는 경우</div>
 	{% highlight javascript %}
 	  var str = 'String';
 	  var num = 12345;
