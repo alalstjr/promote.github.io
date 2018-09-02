@@ -140,7 +140,6 @@
 </div>
 </div>
 
-<div class="box">
 {% highlight javascript %}
   var num = "100num";
   > parseInt(num,10);
