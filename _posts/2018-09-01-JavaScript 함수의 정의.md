@@ -157,7 +157,7 @@ function name(){
 <p>이를 <strong>함수 표현식(Function Expression)</strong> 이라 부릅니다.</p>
 <p>함수 표현식은 <strong>그냥 함수와 다르게 끝에 세미콜론(;) 을 작성해</strong> 주셔야합니다.</p>
 
-함수의 전달인자(arguments)와 매개변수(parameters)
+<div class="small-title">함수의 전달인자(arguments)와 매개변수(parameters)</div>
 {% highlight javascript %}
  function sum(a, b) {
   console.log(a + b);
@@ -170,11 +170,12 @@ function name(){
  // 전달인자를 활용하여 계산식을 만들면 함수는 완성입니다.
 {% endhighlight %}
 
-위에 만들어진 함수의 결과값을 변수에 담는다면 값은 저장되지 않습니다.
-왜냐하면 만들어진 함수에는 결과를 만드는 행동은 있어도
-결과를 반환하는 행동이 없기 때문에 값을 밖으로 가져올수 없습니다.
+<p>개인적으로 <strong>정말 중요한 부분</strong>입니다.</p>
+<p>위에 만들어진 <strong>함수의 결과값을 변수에 담는다면 값은 저장되지 않습니다.</strong></p>
+<p>왜냐하면 만들어진 함수에는 <strong>결과를 만드는 행동은 있어도</strong></p>
+<p><strong>결과를 반환하는 행동이 없기 때문에</strong> 값을 밖으로 가져올수 없습니다.</p>
 
-결과를 반환할려면 return 을 활용해야 합니다.
+<p>결과를 반환할려면 <strong>return</strong> 을 활용해야 합니다.</p>
 
 {% highlight javascript %}
  function sum(a, b) {
@@ -185,9 +186,10 @@ function name(){
  console.log(result);
  > 30
 {% endhighlight %}
-변수 result 값에 저장이 잘 되는 모습을 확인하실 수 있습니다.
-
-외전 - 긴 문장의 코드를 나만의 함수로 만들어서 함축해 보자
+<p><strong>변수 result 값에 저장이 잘 되는 모습</strong>을 확인하실 수 있습니다.</p>
+</div>
+<div class="box">
+  <div class="small-title">외전 - 긴 문장의 코드를 나만의 함수로 만들어서 함축해 보자</div>
 
 {% highlight javascript %}
   // HTML
@@ -208,11 +210,11 @@ function name(){
   var box_span = box_class.querySelectior('span'); // .boxs 안에있는 span 을 불러옵니다.
 {% endhighlight %}
 
-문서 객체에 접근하여 불러오는 코드를 간단하게 나열한것입니다.
-이렇게 보면 코드 길이도 길고 많이 복잡해 보입니다.
-특히 실무에서 사용할경우 객체에 접근하여 불러오는 경우가 많은데
-항상 저렇게 길게 작성하여 쓴다고 생각하면 많이 비효율적일꺼 같습니다.
-이를 함수에 담아 코드를 줄여보겠습니다.
+<p>문서 객체에 접근하여 불러오는 코드를 간단하게 나열한것입니다.</p>
+<p>이렇게 보면 코드 길이도 길고 많이 복잡해 보입니다.</p>
+<p>특히 실무에서 사용할경우 객체에 접근하여 불러오는 경우가 많은데</p>
+<p>항상 저렇게 길게 작성하여 쓴다고 생각하면 많이 비효율적일꺼 같습니다.</p>
+<p>이를 함수에 담아 코드를 줄여보겠습니다.</p>
 
 {% highlight javascript %}
  function $(selector) {
@@ -232,5 +234,6 @@ function name(){
   <img src="{{ site.baseurl }}/static/img/post/2018-09-01-5.png" alt="자바스크립트 출력확인" />
 </div>
 
-함수를 하나 만들어 놓으면 다음에 사용할때 간단하게 $ 만 붙여 전달인자만 작성해 주면
-쉽게 오브젝트를 선택할수 있습니다.
+<p>함수를 하나 만들어 놓으면 다음에 사용할때 간단하게 $ 만 붙여 전달인자만 작성해 주면</p>
+<p>쉽게 오브젝트를 선택할수 있습니다.</p>
+</div>
