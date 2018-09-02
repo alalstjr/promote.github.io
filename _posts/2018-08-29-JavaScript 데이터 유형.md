@@ -192,31 +192,31 @@
 	  > true // 공백은 참을 의미합니다.
 	{% endhighlight %}
 
-	논리형으로 변경하는 경우 고질적인 문제에 주의해야 합니다.
-	Boolean() 에 1 을 넣어도 -1 을 넣어도 글자는 넣어도 전부 true 값을 출력했습니다.
+	<p>논리형으로 변경하는 경우 고질적인 문제에 주의해야 합니다.</p>
+	<p>Boolean() 에 1 을 넣어도 -1 을 넣어도 글자는 넣어도 전부 true 값을 출력했습니다.</p>
 
 	{% highlight javascript %}
-Boolean(0)
-> false
+	Boolean(0)
+	> false
 
-0 == false
-> true
-{% endhighlight %}
-하지만 0 을 넣을 경우에는 false 를 출력하는 것을 볼 수 있으며
-0 하고 false 는 같을 수가 없는데 자바스크립트 언어에서는 둘이 같다고 출력합니다.
-또 다른 경우에는 
-{% highlight javascript %}
-Boolean(null)
-> false
+	0 == false
+	> true
+	{% endhighlight %}
+	<p>하지만 0 을 넣을 경우에는 false 를 출력하는 것을 볼 수 있으며</p>
+	<p>0 하고 false 는 같을 수가 없는데 자바스크립트 언어에서는 둘이 같다고 출력합니다.</p>
+	<p>또 다른 경우에는 </p>
+	{% highlight javascript %}
+	Boolean(null)
+	> false
 
-Boolean(undefined)
-> false
+	Boolean(undefined)
+	> false
 
-Boolean('')
-> false
-{% endhighlight %}
+	Boolean('')
+	> false
+	{% endhighlight %}
 
-한꺼번에 모아서 정리하자면
-!!0 , !!'', !!null, !!undefined
-는 전부 false 를 출력합니다.
+	<p>한꺼번에 모아서 정리하자면</p>
+	<p>!!0 , !!'', !!null, !!undefined</p>
+	<p>는 전부 false 를 출력합니다.</p>
 </div>
