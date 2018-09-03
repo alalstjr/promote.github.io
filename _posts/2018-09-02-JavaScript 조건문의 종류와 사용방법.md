@@ -225,3 +225,20 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
   {% endhighlight %}
 </div>
  
+<div class="box">
+  <div class="small-title">논리 연산자</div>
+  
+  <div class="small-title">AND -> &&</div>
+  <p>A 그리고 B => A && B 라고 작성해야합니다.</p>
+  <p>좀더 보기 쉽게 표현한다면 => true && true</p>
+  <p>A 도 참 이고 B도 참 이여야 한다.</p>
+  
+  <div class="small-title">OR -> ||</div>
+  <p>A 또는 B => A || B 하고 작성해야합니다. (Backspace 아래 하이픈기호입니다.)</p>
+  <p>이것 또한 => true || False</p>
+  <p>A 와 B 중에 하나라도 해당된다면 참이다.</p>
+  
+  <div class="small-title">NOT -> !</div>
+  <p>이전 시간에 많이 봐왔기에 따로 예제는 적지 않겠습니다.</p>
+  <p>부정 연산자입니다.</p>
+</div>
