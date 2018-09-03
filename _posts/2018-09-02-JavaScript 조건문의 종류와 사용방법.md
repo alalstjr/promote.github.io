@@ -123,8 +123,8 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
     <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators" target="_balnk"> - MDN 연산자</a>
 </div>
   <p>비교연산자의 종류</p>
-  <p>같은 (==) : 피연산자들이 같으면 참을 반환</p>
-  <p>다른 (!=) : 피연산자들이 다르면 참을 반환</p>
+  
+  
   <p>엄격하게 같음 (===) : 피연산자들이 피연산자들하고 같은 형태이면 참을 반환</p>
   <p>엄격하게 다름 (!==) : 피연산자들이 다르거나 형태가 다름</p>
   <p>~ 보다 큰 (>) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 크면 참을 반환</p>
@@ -133,6 +133,8 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
   <p>~ 보다 작거나 같음 (<=) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 작거나 같으면 참을 반환</p>
     
   <p>글로 보는것보다 바로 예제를 통해 확인해보고 빠르게 이해해 보도록 하겠습니다.</p>
+  
+  <div class="small-title">같은 (==) : 피연산자들이 같으면 참을 반환</div>
   {% highlight javascript %}
     if( 10 == 10 ){
       console.log(true);
@@ -140,7 +142,9 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
     }
     > true
     // 숫자형인 10이 둘다 '같기때문에' true를 출력합니다.
-    
+   {% endhighlight %} 
+   {% highlight javascript %}
+   <div class="small-title">다른 (!=) : 피연산자들이 다르면 참을 반환</div>
     if( 10 != 10 ){
       console.log(true);
       // 문자형 데이터인 10 와 10 이 '같지않으면' true를 출력해라!
