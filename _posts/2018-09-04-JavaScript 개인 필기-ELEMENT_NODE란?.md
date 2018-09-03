@@ -9,6 +9,9 @@
 JavaScript 에서 document.ELEMENT_NODE 는 1 을 출력합니다. 
 document.ELEMENT_NODE 는 상수입니다.
 상수란 그 값이 변하지 않는 불변량으로, 변수의 반대말 이라는 뜻을 가지고 있습니다.
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-04-1.png" alt="자바스크립트 출력확인" />
+ </div>
 이는 document.ELEMENT_NODE 값에 어떠한 값을 넣어도 변경되지않고 1 을 나타낸다는 것입니다. (상수는 관례적으로 대문자를 쓴다고 한다..)
 
 JavaScript 선언에도 상수 선언이 존재합니다.
