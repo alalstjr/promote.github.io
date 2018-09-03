@@ -122,15 +122,7 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
     <p>비교 연산자는 피연산자들을 비교하고 비교에 따라 논리 값을 반환합니다. 피연산자들은 숫자, 문자열, 논리형, 객체 를 사용할 수 있습니다. 문자열은 유니코드 값을 사용하여 표준 사전순서를 기반으로 비교합니다. 만약 두 피연산자가 다른 형태일 경우,자바스크립트는 대부분 비교를 위해 피연산자를 적절한 타입으로 변환합니다. 이런 행동은 보통 숫자로 피연산자를 숫자로 비교하는 형태로 나타납니다. 형태를 바꾸기의 유일한 예외는 엄격한 비교를 수행하는 === 과 !== 연산이 관련되는 경우입니다.</p>
     <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators" target="_balnk"> - MDN 연산자</a>
 </div>
-  <p>비교연산자의 종류</p>
-  
-  
-  
-  
-  <p>~ 보다 큰 (>) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 크면 참을 반환</p>
-  <p>~ 보다 크거나 같음 (>=) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 크거나 같으면 참을 반환</p>
-  <p>~ 보다 작은 (<) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 작으면 참을 반환</p>
-  <p>~ 보다 작거나 같음 (<=) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 작거나 같으면 참을 반환</p>
+  <div class="small-title">비교연산자의 종류</div>
     
   <p>글로 보는것보다 바로 예제를 통해 확인해보고 빠르게 이해해 보도록 하겠습니다.</p>
   
@@ -194,6 +186,42 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
     }
     > true
     // 숫자형인 데이터인 10 와 10이 '데이터 형이 같기 때문에' true를 출력합니다.
+  {% endhighlight %}
+  
+  <div class="small-title">~ 보다 큰 (>) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 크면 참을 반환</div>
+  {% highlight javascript %}  
+  if(10 > 100){
+    console.log(true);
+  }
+  >
+  // 오른쪽이 더 크기때문에 조건이 틀려 아무것도 출력하지 않습니다.
+  {% endhighlight %}
+  
+  <div class="small-title">~ 보다 크거나 같음 (>=) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 크거나 같으면 참을 반환</div>
+  {% highlight javascript %}  
+  if(10 >= 100){
+    console.log(true);
+  }
+  >
+  // 오른쪽이 더 크고 같지않기 때문에 조건이 틀려 아무것도 출력하지 않습니다.
+  {% endhighlight %}
+  
+  <div class="small-title">~ 보다 작은 (<) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 작으면 참을 반환</div>
+  {% highlight javascript %}  
+  if(10 < 100){
+    console.log(true);
+  }
+  > true
+  // 오른쪽이 더 크기때문에 조건이 맞아 true를 출력합니다.
+  {% endhighlight %}
+  
+  <div class="small-title">~ 보다 작거나 같음 (<=) : 왼쪽의 피연산자 보다 오른쪽의 피연산자가 작거나 같으면 참을 반환</div>
+  {% highlight javascript %}  
+  if(10 <= 10){
+    console.log(true);
+  }
+  > ture
+  // 왼쪽보다 오른쪽이 더 크거나 작지않지만 값이 같기때문에 true를 출력합니다.
   {% endhighlight %}
 </div>
  
