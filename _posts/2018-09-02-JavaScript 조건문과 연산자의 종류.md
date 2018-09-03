@@ -266,5 +266,11 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
    > object
    // typeof 에 [] 는 배열이지만 출력은 object를 출력하는 오류가 발생합니다.
    // 이를 해결하기 위해서 배열만큼은 Array.isArray([]) 를 활용합니다.
+   
+   typeof null
+   > object
+   // null 또한 object 를 출력하는 오류가 발생합니다.
+   
+   typeof 에는 이렇게 array 와 null 값을 올바르게 반환하지 못하는 특징이 있습니다.
    {% endhighlight %}
 </div>
