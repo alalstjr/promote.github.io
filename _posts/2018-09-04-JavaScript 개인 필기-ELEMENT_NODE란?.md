@@ -48,3 +48,8 @@ document.ELEMENT_NODE
 > 1
 
 이를 통해서 비교를 합니다.
+
+더 자세한 사항은 
+<div class="pro-text">
+  <a href="https://developer.mozilla.org/ko/docs/Web/API/Node/nodeType" target="_blank">MDN ELEMENT_NODE</a>
+</div>
