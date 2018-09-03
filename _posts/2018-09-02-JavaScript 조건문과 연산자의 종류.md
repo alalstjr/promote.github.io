@@ -241,4 +241,30 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
   <div class="small-title">NOT -> !</div>
   <p>이전 시간에 많이 봐왔기에 따로 예제는 적지 않겠습니다.</p>
   <p>부정 연산자입니다.</p>
+  
+   <div class="small-title">typeof 데이터형을 알려주는 연산자</div>
+   {% highlight javascript %}
+   typeof 5
+   > number
+   
+   typeof '글자'
+   > string
+   
+   typeof false
+   > boolean
+   
+   typeof function(){}
+   > function
+   
+   typeof object
+   > undefined
+   
+   typeof {}
+   > object
+   
+   typeof []
+   > object
+   // typeof 에 [] 는 배열이지만 출력은 object를 출력하는 오류가 발생합니다.
+   // 이를 해결하기 위해서 배열만큼은 Array.isArray([]) 를 활용합니다.
+   {% endhighlight %}
 </div>
