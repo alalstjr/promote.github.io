@@ -192,3 +192,4 @@ $('.title',$('#box_two')) #box_two 내부에있는 .title 값을 가져와라
     // 숫자형인 데이터인 10 와 10이 '데이터 형이 같기 때문에' true를 출력합니다.
   {% endhighlight %}
 </div>
+ 
