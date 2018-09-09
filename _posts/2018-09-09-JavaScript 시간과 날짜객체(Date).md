@@ -237,6 +237,38 @@
 <p>이를 활용해 실시간으로 시간이 바뀌는 디지털 시간을 시계를 만들어 보겠습니다.</p>
 </div>
 
+{% highlight javascript %}
+	// CSS
+	.watch {
+		background-color: #faffe7;
+		padding: 25px;
+		border-radius: 25px;
+		width: 100%;
+		max-width: 300px;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		left: 50%;
+		top: 50%;
+	}
+	
+	// HTML
+	<div class="watch">
+		<span class="year"></span>년
+		<span class="month"></span>월
+		<span class="date"></span>일
+		<span class="day"></span>요일
+		<span class="hours"></span>시
+		<span class="minutes"></span>분
+		<span class="seconds"></span>초
+		<span class="milliseconds"></span>밀리초
+	</div>
+{% endhighlight %}
+<p>우선 보여지는 모습을 간단하게 꾸며줍니다.</p>
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-09-6.png" alt="자바스크립트 출력확인" />
+</div>
+<p>지금은 아무것도 없는 모습입니다.</p>
+
 <div class="box">
 	<p>우선 문서 객체를 지정하여 시간을 출력할 수 있도록 해야하므로</p>
 {% highlight javascript %}
@@ -247,9 +279,56 @@
 	  return context.querySelector(selector);
 	}
 {% endhighlight %}
-	<p>함수 $ 를 불러옵니다.</p>
+<p>함수 $ 를 불러옵니다.</p>
 <div class="img-box">
   <img src="{{ site.baseurl }}/static/img/post/2018-09-09-4.png" alt="자바스크립트 출력확인" />
 </div>
-	<p>$ 함수를 사용하여 원하는 문서객체를 불러옵니다.</p>
+	
+{% highlight javascript %}
+	var watch		= $('.watch');
+	var year		= $('.year', watch);
+	var month		= $('.month', watch);
+	var date		= $('.date', watch);
+	var day			= $('.day', watch);
+	var hours		= $('.hours', watch);
+	var minutes		= $('.minutes', watch);
+	var seconds		= $('.seconds', watch);
+	var milliseconds	= $('.milliseconds', watch);
+{% endhighlight %}
+<p>$ 함수를 사용하여 원하는 문서객체를 불러옵니다.</p>
+<p>다음 쉽게 원하는 객체를 불러오기위해 변수에 각각 담아 정리합니다.</p>
+
+{% highlight javascript %}
+function viewDate() {
+	year.textContent		= getYear();
+	month.textContent		= getMonth();
+	date.textContent		= getDate();
+	day.textContent			= getDay();
+	hours.textContent		= getHour();
+	minutes.textContent		= getMinute();
+	seconds.textContent		= getSecond();
+	milliseconds.textContent	= getMillisecond();
+}
+{% endhighlight %}
+<p>다음에는 실시간으로 시간을 표시해 주어야 합니다.</p>
+<p>이를 표시해주기 위해서 textContent 를 활용합니다.</p>
+<div class="pro-txt">
+	<a href="https://developer.mozilla.org/ko/docs/Web/API/Node/textContent" target="_balnk">MDN - textContent</a>
+	<p>자세한 textContent 의 내용은 MDN 에서 확인해주세요.</p>
+</div>
+
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-09-7.png" alt="자바스크립트 출력확인" />
+</div>
+<p>이렇게 아무것도 없던 watch 박스 안의 내용을 채워 넣었습니다.</p>
+<p>이제 이것을 새로고침으로 가 아닌 실시간으로 바뀔수 있도록 하겠습니다.</p>
+<p>이를 작동하게 하는방법으로 window.setInterval 을 활용합니다.</p>
+<p> window.setInterval 란 지정해준 시간마다 해당 함수를 실행시킬수 있도록 도와주는 함수입니다.</p>
+
+{% highlight javascript %}
+	viewDate();
+	window.setInterval(viewDate,1000);
+{% endhighlight %}
+
+<p>결과는 1 초마다 함수를 실행하여 시간이 바뀌는것을 확인하실 수 있습니다.</p>
 </div>
