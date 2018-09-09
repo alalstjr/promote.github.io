@@ -121,3 +121,117 @@
 	</div>
 	<p>직접 날짜 객체를 활용하여 날짜를 만들 수 있습니다.</p>
 </div>	
+
+<div class="box">
+	<div class="small-title">위에 메서드 함수를 참고하여 우리나라 날짜로 변화하기</div>
+{% highlight javascript %}
+	// 년도를 가져옵니다.
+	function getYear(format) {
+		var date = new Date();
+		if(!format) {
+			format = '';
+		}
+		// format 전달인자 값이 있으면 전달인자 값을 사용
+		// 전달인자 값이 없다면 빈문자 사용
+		// format 있을경우 "2018년"
+		// format 없을경우 "2018"
+		return date.getFullYear() + format;
+	}
+	
+	// 월을 가져옵니다.
+	function getMonth(format) {
+		var date = new Date();
+		if(!format) {
+			format = '';
+		}
+		return (date.getMonth() + 1) + format;
+	}
+	
+	// 일을 가져옵니다.
+	function getDate(format) {
+		var date = new Date();
+		if(!format) {
+			format = '';
+		}
+		return date.getDate() + format;
+	}
+
+	// 시간을 가져옵니다.
+	function getHour(format) {
+		var date = new Date();
+		if(!format) {
+			format = '';
+		}
+		return date.getHours() + format;
+	}
+	
+	// 분을 가져옵니다.
+	function getMinute(format) {
+		var date = new Date();
+		if(!format) {
+			format = '';
+		}
+		return date.getMinutes() + format;
+	}
+	
+	// 초를 가져옵니다.
+	function getSecond(format) {
+		var date = new Date();
+		if(!format) {
+			format = '';
+		}
+		return date.getSeconds() + format;
+	}
+	
+	// 몇 밀리초를 가져옵니다.
+	function getMillisecond(format) {
+		var date = new Date();
+		if(!format) {
+			format = '';
+		}
+		return date.getMilliseconds() + format;
+	}
+	
+	// 요일을 가져옵니다.
+	function getDay(format) {
+		var date = new Date();
+		var day  = date.getDay();
+		switch(day){
+			case 0:
+			day = '일';
+			break;
+			case 1:
+			day = '월';
+			break;
+			case 2:
+			day = '화';
+			break;
+			case 3:
+			day = '수';
+			break;
+			case 4:
+			day = '목';
+			break;
+			case 5:
+			day = '금';
+			break;
+			case 6:
+			day = '토';
+			break;
+		}
+		if(!format){
+			format = "";
+		}
+		return day + format;
+	}
+{% endhighlight %}
+	
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-09-4.png" alt="자바스크립트 출력확인" />
+</div>
+
+<p>요일 같은 경우에는 swicth 문을 활용하여 숫자로 출력되는것을 </p>
+<p>'월화수목금토일' 로 조건문을 찾아 변환하여 출력하게 하였습니다.</p>
+
+<p>함수를 만들어 쉡게 Date 객체를 만들어 시간과 날짜를 불러올 수 있었습니다.</p>
+</div>
