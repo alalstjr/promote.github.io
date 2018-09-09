@@ -234,4 +234,22 @@
 <p>'월화수목금토일' 로 조건문을 찾아 변환하여 출력하게 하였습니다.</p>
 
 <p>함수를 만들어 쉡게 Date 객체를 만들어 시간과 날짜를 불러올 수 있었습니다.</p>
+<p>이를 활용해 실시간으로 시간이 바뀌는 디지털 시간을 시계를 만들어 보겠습니다.</p>
+</div>
+
+<div class="box">
+	<p>우선 문서 객체를 지정하여 시간을 출력할 수 있도록 해야하므로</p>
+{% highlight javascript %}
+	function $(selector, context) {
+	  if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
+	  if (context && context.nodeType !== document.ELEMENT_NODE) { context = el(String(context)); }
+	  if (!context) { context = document; }
+	  return context.querySelector(selector);
+	}
+{% endhighlight %}
+	<p>함수 $ 를 불러옵니다.</p>
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-09-4.png" alt="자바스크립트 출력확인" />
+</div>
+	<p>$ 함수를 사용하여 원하는 문서객체를 불러옵니다.</p>
 </div>
