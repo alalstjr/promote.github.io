@@ -65,16 +65,36 @@
 	
   switch ( buy ) {
 	  case '과자':
-		  console.log('과자를 구매합니다.')
+		  console.log('과자를 구매합니다.');
+		  break;
 	  case '음료수':
 		  console.log('음료수를 구매합니다.');
+		  break;
 	  case '아이스크림':
 		  console.log('아이스크림를 구매합니다.');
+		  break;
 	  case '칫솔':
 	  case '치약':
 		  console.log('치약 이나 칫솔 구매시 1+1행사도 둘다 드립니다.');
+		  break;
 	  default:
 		  console.log('고객님이 찾으시는 물건이 없습니다.');
+		  break;
   }
 {% endhighlight %}
+<p>구매할 물품인 치약을 switch 문에 변수로 넣습니다.</p>
+<p>그럼 if문 처럼 위부터 마지막까지 하나하나 비교하지않고 이미 지정되어있는 case를 보고 바로 값을 출력합니다.</p>
+<p>case 가 치약인 조건을 찾고 해당 조건에 출력문을 출력합니다.</p>
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-1.png" alt="자바스크립트 출력확인" />
+</div>
+
+<p>그리고 제어문(break) 를 통해 다음 출력을 막아줍니다.</p>
+<p>만약 제어문(break) 를 사용하지 않을경우</p>
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-1.png" alt="자바스크립트 출력확인" />
+</div>
+<p>만약에 제어문(break) 이 없다면 해당 출력문부터 아래 출력문까지 전부 출력되기에 꼭 막아주어야 합니다.</p>
+
+<p>많이 사용하는 건 if문이지만 조건이 많아지면 switch문을 사용하여 최적화 해주는게 좋다고 생각합니다.</p>
 </div>
