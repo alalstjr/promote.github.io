@@ -4,8 +4,6 @@
     <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_balnk">MDN- 날짜객체</a>
   </div>
   <p>날짜를 메서드 함수로 가져오는 방법</p>
-</div>
-
 {% highlight javascript %}
 	var date_object = new Date();
 	// Date 객체를 생성한후 변수에 참조
@@ -65,3 +63,45 @@
 	// 1970년 1월 1일 00:00:00 UTC 이후의 밀리 초 수로 변환
 	// 지금까지 지나온 시간
 {% endhighlight %}  
+</div>
+<div class="box">
+	<div class="small-title">객체 메서드를 활용하여 잘짜 정보 가져오기</div>
+{% highlight javascript %}
+	var date_object = new Date();
+	// Date 객체를 생성한후 변수에 참조
+	
+	console.log(
+		"현재 년 월 일 : ",date_object.toLocaleDateString()
+	);
+
+	console.log(
+		"현재 년 월 일 : ",date_object.toDateString()
+		// 날짜를 영어로 가져옵니다.
+	);
+	
+	console.log(
+		"국제표준시간 : ",date_object.toISOString()
+		// 국제 표준형태 시간
+	);
+	
+	console.log(
+		"지역시간 : ",date_object.toLocaleTimeString()
+		// 지역 시간
+	);
+	
+	console.log(
+		"날짜 : ",date_object.toString()
+		// 날짜를 문자로 가져옵니다.
+	);
+	
+	console.log(
+		"날짜 : ",date_object.toTimeString()
+		// 날짜 문자를 함축하여 가져옵니다.
+	);
+	
+	console.log(
+		"날짜 : ",date_object.toUTCString()
+		// 날짜를 문자로 가져옵니다.
+	);
+{% endhighlight %}  
+</div>
