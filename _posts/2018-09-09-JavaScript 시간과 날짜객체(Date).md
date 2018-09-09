@@ -62,7 +62,10 @@
 	// 현재 시간을 밀리초 값으로 구하는 방법
 	// 1970년 1월 1일 00:00:00 UTC 이후의 밀리 초 수로 변환
 	// 지금까지 지나온 시간
-{% endhighlight %}  
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-09-1.png" alt="자바스크립트 출력확인" />
+</div>
 </div>
 <div class="box">
 	<div class="small-title">객체 메서드를 활용하여 잘짜 정보 가져오기</div>
@@ -104,4 +107,17 @@
 		// 날짜를 문자로 가져옵니다.
 	);
 {% endhighlight %}  
+	<div class="img-box">
+	  <img src="{{ site.baseurl }}/static/img/post/2018-09-09-2.png" alt="자바스크립트 출력확인" />
+	</div>
 </div>
+
+<div class="box">
+{% highlight javascript %}
+	console.log(new Date(2018,1,20))
+{% endhighlight %}
+	<div class="img-box">
+	  <img src="{{ site.baseurl }}/static/img/post/2018-09-09-3.png" alt="자바스크립트 출력확인" />
+	</div>
+	<p>직접 날짜 객체를 활용하여 날짜를 만들 수 있습니다.</p>
+</div>	
