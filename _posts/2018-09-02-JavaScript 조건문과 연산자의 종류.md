@@ -3,6 +3,7 @@ JavaScript의 조건문
 <div class="pro-txt">
 조건문의 참고 자료는 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#%EC%A1%B0%EA%B1%B4%EB%AC%B8" target="_blank">MDN 의 조건문</a> 입니다.
 조건문은 특정 조건이 참인 경우에 실행하는 명령의 집합입니다. JavaScript는 두 가지 조건문을 지원합니다: if...else and switch.
+조건문에서의 '~문' 은 statement 라 부르는데 간단하게 Code Block{} 을 가지고있는 명령문장 이라 생각하시면 됩니다.
 </div>
 
 글로 감을 잡고 바로 예제를보며 확인해보는게 빠를꺼 같습니다.
