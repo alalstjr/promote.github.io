@@ -106,5 +106,47 @@
 			condition ternary expresstion - MDN
 		</a>
 	</div>
+	<p>3항 연산자에서 '3항' 이 가리키는 것은</p>
+	<p><strong>조건 ? 값1 : 값2</strong> 라는 피연산자 3개가 ? 와 : 연산자 사이에 존재하는것을 의미합니다. </p>
+	<p>3항 연산자는 변수에 할당할 수 있습니다.</p>
+	<p>예외 ) Block 문은 변수에 할당할 수 없습니다.</p>
+	<p>예제를 통해서 확인해 보도록 하겠습니다.</p>
+</div>
+<div class="box">
+{% highlight javascript %}
+var val = if(ture) = {'출력해라'};
+{% endhighlight %}
+	<p>var val 이라는 변수안에 if Block 문을 할당 하였습니다.</p>
+	<p>하지만</p>
+	<div class="img-box">
+	  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-2.png" alt="자바스크립트 출력확인" />
+	</div>
+	<p>결과는 오류가 나옵니다. 변수에는 if Block 문을 할당할 수 없기 때문입니다.</p>
 	
+{% highlight javascript %}
+var val = true ? '참입니다.' : '거짓입니다.';
+{% endhighlight %}
+	<p>3항 연산자는 정상적으로 변수에 할당할 수 있기때문에</p>
+	<div class="img-box">
+	  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-3.png" alt="자바스크립트 출력확인" />
+	</div>
+	<p>조건값이 true 인 '참입니다.' 가 정상적으로 출력하는것을 볼 수 있었습니다.</p>
+	<p>3항 연산자를 사용하는 이유는 무엇일까요? </p>
+{% highlight javascript %}
+var val = true ? '참입니다.' : '거짓입니다.';
+{% endhighlight %}
+3항 연산자의 코드를 if Block 문으로 변환해보겠습니다.
+{% highlight javascript %}
+var val = true;
+if( val ) {
+	result = '참입니다';
+} else {
+	result = '거짓입니다.'
+}
+{% endhighlight %}
+<p>한줄로 표시되는 3항 조건문에 비에서 if Block 문은 코드를 개행해야하며 줄도 길어집니다.</p>
+<p>3항 조건문은 바로 변수에 조건문을 할당하여 사용할 수 있끼때문에 편리해서 많이 사용합니다.</p>
+<p>많이 사용한다해서 if Block 문을 안쓰는것은 아닙니다.</p>
+<p>처음 코드를 접하거나 보기 어려워하시는 분들은 if Block 문 으로 작업하시는게 가독성으로 보기 편하기때문에</p>
+<p>000    
 </div>
