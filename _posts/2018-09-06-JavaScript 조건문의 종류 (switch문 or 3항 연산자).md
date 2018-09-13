@@ -144,9 +144,25 @@ if( val ) {
 	result = '거짓입니다.'
 }
 {% endhighlight %}
-<p>한줄로 표시되는 3항 조건문에 비에서 if Block 문은 코드를 개행해야하며 줄도 길어집니다.</p>
-<p>3항 조건문은 바로 변수에 조건문을 할당하여 사용할 수 있끼때문에 편리해서 많이 사용합니다.</p>
+<p>한줄로 표시되는 3항 연산자에 비에서 if Block 문은 코드를 개행해야하며 줄도 길어집니다.</p>
+<p>3항 연산자는 바로 변수에 조건문을 할당하여 사용할 수 있끼때문에 편리해서 많이 사용합니다.</p>
 <p>많이 사용한다해서 if Block 문을 안쓰는것은 아닙니다.</p>
 <p>처음 코드를 접하거나 보기 어려워하시는 분들은 if Block 문 으로 작업하시는게 가독성으로 보기 편하기때문에</p>
-<p>000    
+<p>if Block 문으로 작업하시는 분들도 많이 있습니다.</p>
+</div>
+<div class="box">
+	<div class="small-title">3항 연산자도 연속하여 조건을 추가할 수 있다.</div>
+	<p><strong>var val = val ? '' : 조건1 ? 참 : 조건2 ? 참 : 거짓;</strong></p>
+	<p>3항 연산자 참 다음 거짓 결과가 아닌 조건문을 추가하면 else 처럼 계속하여 조건을 추가할 수 있습니다.</p>
+{% highlight javascript %}
+var val_2 = false;
+var val_3 = false;
+
+var val_1 = false ? '참입니다.' : val_2 ? '두번째 조건' : val_3 ? '세번째 조건' : '거짓입니다.';
+{% endhighlight %}
+	<div class="img-box">
+	  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-3.png" alt="자바스크립트 출력확인" />
+	</div>
+	<p>위 결과는 세번째 조건이 false 이기때문에 거짓으로 '거짓입니다.' 를 출력 하였습니다.</p>
+	<p>이렇게 3항 연산자 안에 조건문을 계속하여 추가할 수 있습니다.</p>
 </div>
