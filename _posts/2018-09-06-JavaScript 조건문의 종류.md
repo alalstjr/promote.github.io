@@ -98,3 +98,13 @@
 
 <p>많이 사용하는 건 if문이지만 조건이 많아지면 switch문을 사용하여 최적화 해주는게 좋다고 생각합니다.</p>
 </div>
+
+<div class="box">
+	<div class="small-title">조건(3항) 연산자</div>
+	<div class="pro-txt">
+		<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" target="_balnk">
+			condition ternary expresstion - MDN
+		</a>
+	</div>
+	
+</div>
