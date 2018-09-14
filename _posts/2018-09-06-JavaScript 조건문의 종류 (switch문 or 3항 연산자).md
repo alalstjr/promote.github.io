@@ -161,7 +161,7 @@ var val_3 = false;
 var val_1 = false ? '참입니다.' : val_2 ? '두번째 조건' : val_3 ? '세번째 조건' : '거짓입니다.';
 {% endhighlight %}
 	<div class="img-box">
-	  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-3.png" alt="자바스크립트 출력확인" />
+	  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-4.png" alt="자바스크립트 출력확인" />
 	</div>
 	<p>위 결과는 세번째 조건이 false 이기때문에 거짓으로 '거짓입니다.' 를 출력 하였습니다.</p>
 	<p>이렇게 3항 연산자 안에 조건문을 계속하여 추가할 수 있습니다.</p>
@@ -197,11 +197,36 @@ var data_1 = val_1 && console.log('참 입니다.'); // val_1 값이 참일때 �
 var data_2 = val_2 || console.log('참 입니다.'); // val_1 값이 거짓일때 실행
 {% endhighlight %}
 <div class="img-box">
-  <img src="{{ site.baseurl }}/static/img/post/2018-09-01-6.png" alt="자바스크립트 출력확인" />
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-5.png" alt="자바스크립트 출력확인" />
 </div>
 <p>첫번째 val_1 값이 'true' 이므로 && 조건식에 맞음으로서 console.log('참 입니다.') 를 출력합니다.</p>
 <p>&& 일때는 값이 참일 경우에만 값을 출력합니다.</p>
 <p>두번째 val_2 값도 'true' 이므로 || 조건식에 맞지 않음으로 아무것도 출력하지 않습니다.</p>
 <p>|| 일때는 값이 거짓일 경우에만 값을 출력합니다.</p>
+{% highlight javascript %}
+var val = true;
+if( val ) { date = '값입니다.'; }
+console.log(date);
 
+var date = val && '값입니다.';
+console.log(date);
+// val 값이 true 참임으로 '값입니다.' 를 출력합니다.
+// && 논리곱 연산자는 true 인것만 조건식에 맞습니다.
+
+var date = val || '값입니다.';
+console.log(date);
+// val 값이 true 참임으로 '값입니다.' 를 출력하지 않습니다.
+// || 논리합 연산자는 false 인것만 조건식에 맞습니다.
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-06-6.png" alt="자바스크립트 출력확인" />
+</div>
+<p>if Block문을 date 변수에 논리곱(&&) 과 논리합(||) 연산자를 할당하는방법으로 변환해보았습니다.</p>
+<p>위에 식에서 val && '값입니다.'; 를 변수 val 값에 할당하여 사용했는데</p>
+{% highlight javascript %}
+console.log( val && '값입니다.' );
+// and
+console.log( val || '값입니다.' );
+{% endhighlight %}
+<p>이런식으로 변수값에 할당하지 않아도 값은 조건문에 따라 동일하게 출력됩니다.</p>
 </div>
