@@ -137,4 +137,7 @@
 <div class="pro-txt">
   <a href="https://codepen.io/anon/pen/OooxME" target="_balnk">결과 확인하기</a>
 </div>
+<p>여기서 조심해야 할점은 요소에 이벤트를 추가할때는 sum() 으로 이벤트를 실행 하였습니다.</p>
+<p>하지만 직접 요소를 찾아서 이벤트를 실행 했을경우에는 sum 를 연결 시킵니다.</p>
+<p>그래야지 이벤트를 실행했을때 sum 함수를 실행실킬 수 있습니다.</p>
 </div>
