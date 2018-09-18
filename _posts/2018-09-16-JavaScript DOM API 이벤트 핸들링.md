@@ -1,4 +1,7 @@
 <div class="box">
+<div class="small-title">
+	Javascript dom api 이벤트 핸들링
+</div>		
   <div class="pro-txt">
     오늘 공부하는 이벤트의 작동과 메서드의 종류 사용방법
     <a href="https://developer.mozilla.org/ko/docs/Web/API/Event" target="_balnk">MDN - 이벤트의 핸들러</a>
