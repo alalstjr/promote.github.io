@@ -156,4 +156,10 @@ $('form').oninput = function () {
 
 <div class="box">
 	<p>오늘 배운것을 요약하여 나열해보겠습니다.</p>
+	<div class="small-title">요소에 직접 이벤트 속성을 넣어 실행</div>
+	<p>'form' 요소에 oninput="sum()" 을 추가하여 함수를 실행하는 방법</p>
+	<div class="small-title">대상을 직접 찾아서 설정해 실행</div>
+	<p>function sum() {} 함수를 담아 form.oninput = sum; 직접 연결하여 실행</p>
+	<p>혹은</p>
+	<p>$('form').oninput = function () {} 직접 'form' 에 함수를 담아 바로 실행하는 방법</p>
 </div>
