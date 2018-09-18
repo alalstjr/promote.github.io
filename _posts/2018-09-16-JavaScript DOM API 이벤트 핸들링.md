@@ -174,32 +174,28 @@ $('form').oninput = function () {
 {% highlight javascript %}
   // HTML
   <a href="#" class="event">
-  	Click..!
+	<img src="{{ site.baseurl }}/static/img/post/2018-09-16-3.png" alt="자바스크립트 연습"/>
   </a>
 	
   // CSS
   .event {
-	display: block;
-	width: 100%;
-	max-width: 300px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	text-decoration: none;
-	color: #333;
-	font-size: 26px;
-	background-color: aqua;
-	border-radius: 50px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	transition: all 0.2s ease;
+  	display: block;
+  	width: 100%;
+  	max-width: 300px;
+  	position: absolute;
+  	left: 50%;
+  	top: 50%;
+  	transform: translate(-50%,-50%);
+  	text-decoration: none;
+  	color: #333;
+  }
+  .event img {
+  	width: 300px;
   }
   .event:active {
-	background-color: #fff;
-	color:aqua;
-	border: 1px solid aqua;
+  	background-color: #fff;
+  	color:aqua;
+  	border: 1px solid aqua;
   }
 {% endhighlight %}
 
@@ -227,4 +223,30 @@ $('form').oninput = function () {
 </div>
 <p>클레스 명이 event 인 click 을 클릭했을때 정상적으로 click() 함수가 실행되며 동시에 연결된</p>
 <p>함수 toggle_event() 가 실행되어 console.log를 정상적으로 출력하는것을 확인할 수 있었습니다.</p>
+</div>
+<div class="box">
+	<div class="small-title">클릭한 대상의 속성(img,url..) 값 가져오기</div>
+	<p>클릭한 대상의 이미지 속성을 가져와야 합니다.</p>
+	<p>속성을 가져오기 위해서는 target 이벤트를 활용합니다.</p>
+{% highlight javascript %}
+// 우선 event 의 변수 초기값을 설정합니다.
+var event = null;
+
+function click() {
+  // 클레스명이 event 인 엘리먼트를 이벤트 변수에 담아줍니다.
+  event = $('.event');
+  // 클릭 이벤트를 만들어 toggle_event 의 함수를 연결시켜 줍니다.
+  event.addEventListener('click',toggle_event);
+}
+// 클릭 함수를 실행합니다.
+click();
+
+function toggle_event(e) {
+  e.preventDefault();
+  // element의 속성은 e 의 target이벤트 안에 있습니다.
+  var target = e.target;
+  // element 속성의 src 를 target을 활용해 변경합니다.
+  target.src = '{{ site.baseurl }}/static/img/post/2018-09-16-2.png';
+}
+{% endhighlight %}
 </div>
