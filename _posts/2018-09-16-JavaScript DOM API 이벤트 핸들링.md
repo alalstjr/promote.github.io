@@ -56,30 +56,30 @@
 </div>
 <div class="box">
 {% highlight javascript %}
-	function $(selector, context) {
-	  if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
-	  if (context && context.nodeType !== document.ELEMENT_NODE) { context = el(String(context)); }
-	  if (!context) { context = document; }
-	  return context.querySelector(selector);
-	}
-	
-	function c(object){
-		console.log(object);
-	}
-	
-	function sum() {
-    // 변수 val_1 과 val_2 에 각각의 input 값을 할당합니다.
-    // *주의 Number 를 해줘야합니다. 안할경우 value 값을 string 으로 인식하여 46 이 출력됩니다
-		var val_1 = Number($('input[aria-label="첫번째"]').value);
-		var val_2 = Number($('input[aria-label="두번째"]').value);
-		var output = $('output[aria-label="결과값"]');
-		var result = val_1 + val_2;
-		output.value = result;
+function $(selector, context) {
+  if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
+  if (context && context.nodeType !== document.ELEMENT_NODE) { context = el(String(context)); }
+  if (!context) { context = document; }
+  return context.querySelector(selector);
+}
 
-		c(val_1);
-		c(val_2);
-		c(result);
-	}
+function c(object){
+  console.log(object);
+}
+
+function sum() {
+  // 변수 val_1 과 val_2 에 각각의 input 값을 할당합니다.
+  // *주의 Number 를 해줘야합니다. 안할경우 value 값을 string 으로 인식하여 46 이 출력됩니다
+  var val_1 = Number($('input[aria-label="첫번째"]').value);
+  var val_2 = Number($('input[aria-label="두번째"]').value);
+  var output = $('output[aria-label="결과값"]');
+  var result = val_1 + val_2;
+  output.value = result;
+
+  c(val_1);
+  c(val_2);
+  c(result);
+}
 {% endhighlight %}
 <div class="img-box">
   <img src="{{ site.baseurl }}/static/img/post/2018-09-16-1.png" alt="자바스크립트 출력확인" />
@@ -99,39 +99,39 @@
 {% highlight javascript %}
 // HTML
 <form>
-	<div id="box">
-		<input value="4" aria-label="첫번째" type="number"> 
-		+ 
-		<input value="6" aria-label="두번째" type="number">
-		=
-		<output aria-label="결과값">10</output>
-	</div>
+  <div id="box">
+    <input value="4" aria-label="첫번째" type="number"> 
+    + 
+    <input value="6" aria-label="두번째" type="number">
+    =
+    <output aria-label="결과값">10</output>
+  </div>
 </form> 
 
 // JavaScript
-	function $(selector, context) {
-	  if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
-	  if (context && context.nodeType !== document.ELEMENT_NODE) { context = el(String(context)); }
-	  if (!context) { context = document; }
-	  return context.querySelector(selector);
-	}
-	
-	function c(object){
-		console.log(object);
-	}
-	
-	function sum() {
-    // 변수 val_1 과 val_2 에 각각의 input 값을 할당합니다.
-    // *주의 Number 를 해줘야합니다. 안할경우 value 값을 string 으로 인식하여 46 이 출력됩니다
-		var val_1 = Number($('input[aria-label="첫번째"]').value);
-		var val_2 = Number($('input[aria-label="두번째"]').value);
-		var output = $('output[aria-label="결과값"]');
-		var result = val_1 + val_2;
-		output.value = result;
-	}
-  
-	var form = $('form');
-	form.oninput = sum;
+function $(selector, context) {
+  if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
+  if (context && context.nodeType !== document.ELEMENT_NODE) { context = el(String(context)); }
+  if (!context) { context = document; }
+  return context.querySelector(selector);
+}
+
+function c(object){
+  console.log(object);
+}
+
+function sum() {
+  // 변수 val_1 과 val_2 에 각각의 input 값을 할당합니다.
+  // *주의 Number 를 해줘야합니다. 안할경우 value 값을 string 으로 인식하여 46 이 출력됩니다
+  var val_1 = Number($('input[aria-label="첫번째"]').value);
+  var val_2 = Number($('input[aria-label="두번째"]').value);
+  var output = $('output[aria-label="결과값"]');
+  var result = val_1 + val_2;
+  output.value = result;
+}
+
+var form = $('form');
+form.oninput = sum;
 {% endhighlight %}
 
 <div class="pro-txt">
@@ -140,4 +140,20 @@
 <p>여기서 조심해야 할점은 요소에 이벤트를 추가할때는 sum() 으로 이벤트를 실행 하였습니다.</p>
 <p>하지만 직접 요소를 찾아서 이벤트를 실행 했을경우에는 sum 를 연결 시킵니다.</p>
 <p>그래야지 이벤트를 실행했을때 sum 함수를 실행실킬 수 있습니다.</p>
+<p>또 다른 방법으로는 </p>
+
+{% highlight javascript %}
+$('form').oninput = function () {
+ var val_1 = Number($('input[aria-label="첫번째"]').value);
+ var val_2 = Number($('input[aria-label="두번째"]').value);
+ var output = $('output[aria-label="결과값"]');
+ var result = val_1 + val_2;
+ output.value = result;
+}
+{% endhighlight %}
+<p>직접 form 의 oninput 으로 바로 담을 수 도 있습니다.</p>
+</div>
+
+<div class="box">
+	<p>오늘 배운것을 요약하여 나열해보겠습니다.</p>
 </div>
