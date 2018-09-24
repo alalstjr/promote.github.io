@@ -68,3 +68,5 @@ function $$(selector, context) {
 <div class="small-title">세번째 조건문</div>
 <p>context 에 값이 존재하지 않는다면 context 는 document로 대체한다.</p>
 </div>
+<iframe height='265' scrolling='no' title='xaNGPj' src='//codepen.io/alalstjr/embed/xaNGPj/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/alalstjr/pen/xaNGPj/'>xaNGPj</a> by alalstjr (<a href='https://codepen.io/alalstjr'>@alalstjr</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
