@@ -139,7 +139,7 @@
 	<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/parseInt" target="_blank">parseInt(string,radix), parseFloat(string,radix) 함수 를 이용하여 데이터 형을 변경할 수 있습니다. - MDN</a>
 </div>
 </div>
-
+<div class="box">
 {% highlight javascript %}
   var num = "100num";
   > parseInt(num,10);
