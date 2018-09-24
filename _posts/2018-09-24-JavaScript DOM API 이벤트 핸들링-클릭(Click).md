@@ -39,6 +39,7 @@
   <img src="{{ site.baseurl }}/static/img/post/2018-09-24-1.png" alt="자바스크립트 출력확인" />
 </div>
 <p>파란선을 넘어서 불러온 파일이 웹이 로딩이 된후 불러온 파일이란것을 알려주는 것 입니다.</p>
+<p>미리 파일을 로드 시킴으로서 깜빡임 오작동없이 바로 이미지 교체를 볼 수 있는것입니다.</p>
 <p>lazyload 의 코드</p>
 {% highlight javascript %}
 var img ;
