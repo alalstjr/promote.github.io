@@ -6,7 +6,17 @@
  
  <div class="box">
   <p>KeyBoardEvent 에는 keydown, keypress, keyup 세가지가 존재합니다.</p>
-  <p>위 세가지 이벤트를 활용하여 간단한 움직이는 모션을 만들며 KeyBoardEvent를 연습하겠습니다.</p>
+  <p>이벤트 발생 순서는 keydown → keypress → keyup 순으로 나열 됩니다.</p>
+  <br/>
+  <p>키가 처음 눌러지면 keydown 이벤트가 발생합니다.</p>
+  <p>keydown이 발생하는 조건 버튼은</p>
+  <p>keydown - 영문, 숫자, space, enter, 한글, tab, caps, lock, shift, ctrl, alt(option), command, arrow, F1 ~ F12</p>
+  <br/>
+  <p>keydown 이벤트 이후 keypress 이벤트가 발생합니다.</p>
+  <p>keypress - 영문, 숫자, space, enter</p>
+  <br/>
+  <p>키를 놓으면 keyup 이벤트가 발생합니다.</p>
+  <p>keyup - tab, caps lock발생 X</p>
  </div>
  
  <div class="box">
