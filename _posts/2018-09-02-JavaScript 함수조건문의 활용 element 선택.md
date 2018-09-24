@@ -68,5 +68,11 @@ function $$(selector, context) {
 <div class="small-title">세번째 조건문</div>
 <p>context 에 값이 존재하지 않는다면 context 는 document로 대체한다.</p>
 </div>
+<div class="box">
 <iframe height='265' scrolling='no' title='xaNGPj' src='//codepen.io/alalstjr/embed/xaNGPj/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/alalstjr/pen/xaNGPj/'>xaNGPj</a> by alalstjr (<a href='https://codepen.io/alalstjr'>@alalstjr</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+</div>
+<div class="box">
+ <p>이렇게 조건문과 함수를 활용하여 간단하게 $ 와 $$ 를 이용하면 긴 문장을 다시 작성할 필요없이 element 를 선택할 수 있습니다.</p>
+ <p>나중에는 $ 함수안에 같은 클레스 안에서 몇번째 클레스만 가져와라 라는 구문을 추가하도록 하겠습니다.</p>	
+</div>
