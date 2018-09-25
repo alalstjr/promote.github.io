@@ -177,3 +177,100 @@ do {
 <p>while 반복문 은 조건이 거짓이면 실행되지않고 반복문을 빠져나오지만</p>
 <p>do ~ while 반복문의 경우에는 조건이 거짓이라도 단 1회는 실행을 하고 반복문을 빠져나오는 차이점이 있습니다.</p>
 </div>
+
+<div class="box">
+  <div class="small-title">for 문</div>
+  <p>조건이 거짓으로 판별될 때까지 반복 C언어 반복문과 비슷합니다.</p>
+  <p>for ([초기문]; [조건문]; [증감문]) {...}</p>
+  <p>while문을 for 문으로 바꾸면서 연습해 보도록 하겠습니다.</p>
+{% highlight javascript %}
+var i = 0;
+while (i < 10) {
+  console.log(i);
+  ++i;
+}
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-10.png" alt="자바스크립트 출력확인" />
+</div>
+<p>위 while문을 for문으로 바꾸어 보겠습니다.</p>
+{% highlight javascript %}
+for (var i = 0; i < 10; ++i){
+  console.log(i);
+}
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-10.png" alt="자바스크립트 출력확인" />
+</div>
+<p>결과는 동일하게 출력 됩니다.</p>
+<p>변수 선언구간이 구분되어있는 while문</p>
+<p>for문 안에 변수 선언이 들어가있는 반복문 (for문도 변수 선언구간을 밖으로 뺄수 있지만 빼지않습니다. while 문과 차이가 없어지기 때문입니다.)</p>
+</div>
+
+<div class="box">
+  <div class="small-title">중복된 반복문</div>
+  <p>중복된 while 문</p>
+{% highlight javascript %}
+var i = 0; var j = 4;
+while ( i < 10 ) {
+  while ( j > 0 ) {
+    console.log('j:',j);
+    j = j - 2;
+  }
+  console.log('i:', i);
+  ++i;
+}
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-11.png" alt="자바스크립트 출력확인" />
+</div>
+  <p>중복된 for문</p>
+{% highlight javascript %}
+for ( var i = 0; i < 10; ++i ) {
+ for ( var j = 4; j > 0; j = j -2 ){
+  console.log('j:',j);
+ }
+ console.log('i:', i);
+}
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-11.png" alt="자바스크립트 출력확인" />
+</div>
+  <p>둘의 결과는 동일합니다.</p>
+<p>for문을 중첩되지 않고 사용할 수 있는 방법도 있습니다.</p>
+{% highlight javascript %}
+for ( var i = 0, j = 4; i < 10; ++i, j -= 2 ) {
+ if ( j > 0 ){
+  console.log('j:',j);
+  continue;
+ }
+ console.log('i:', i);
+}
+{% endhighlight %}
+  <p>결과는 위와 동일하게 출력됩니다.</p>
+  <p>초기값과 증감값을 묶어 줄수 있다는 것을 확인하는 방법이였습니다.</p>
+</div>
+  
+<div class="box">
+  <div class="small-title">for문에 label 문 활용하기</div>
+{% highlight javascript %}
+outFor:for ( var i = 0; i < 10; ++i ) {
+ inFor:for ( var j = 4; j > 0; j = j -2 ){
+  console.log('j:',j);
+  break outFor;
+ }
+ console.log('i:', i);
+}
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-12.png" alt="자바스크립트 출력확인" />
+</div>
+  <p>label 제어문 으로 인해 j값 4 만 출력되는 것을 확인하실 수 있습니다.</p>
+</div>
+  
+<div class="box">
+  <div class="small-title">배열과 for문을 활용한 예제</div>
+<iframe height='265' scrolling='no' title='배열과 for문을 활용한 색상변환 예제' src='//codepen.io/alalstjr/embed/NLZeaM/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/alalstjr/pen/NLZeaM/'>배열과 for문을 활용한 색상변환 예제</a> by alalstjr (<a href='https://codepen.io/alalstjr'>@alalstjr</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+  간단히 코드펜에서 확인해 보세요~
+</div>
