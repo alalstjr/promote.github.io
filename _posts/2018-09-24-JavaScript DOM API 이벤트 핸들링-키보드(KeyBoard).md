@@ -20,5 +20,18 @@
  </div>
  
  <div class="box">
- 
+  <p>KeyBoardEvent 실행 방법에는 구형 과 신형 방법이 있습니다.</p>
+  <p>예전 방식인 구형은 window.onkeydown = function(){}; 으로 이벤트를 조작하지만</p>
+  <p>신형 방식은 window.addEventListener('keydown', function(){}); 으로 이벤트를 실행 조작합니다.</p>
  </div>
+
+<div class="box">
+ <p>window.addEventListener('keydown', function(){}); 의 함수 전달받는 인자값에는 event, evt, e 세개를 받을 수 있습니다.</p>
+ <p>ex) function(event), function(evt), function(e) 이런식으로 인자값을 받을 수 있습니다.</p>
+ <p>간단한 KeyBoardEvent 를 구현해 보고 확인해 보도록 하겠습니다.</p>
+{% highlight javascript %}
+ window.addEventListener('keydown',function(e){
+  console.log('이벤트 작동'+e.type);
+ });
+{% endhighlight %}
+</div>
