@@ -123,6 +123,7 @@ while(while_if) {
 
 <div class="box">
   <div class="small-title">label 문</div>
+  <p>2중 중첩 반복문일 경우에 사용합니다.</p>
 {% highlight javascript %}
 var while_if = true;
 var count = 0;
@@ -153,4 +154,26 @@ while(while_if) {
   }
 }
 {% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-9.png" alt="자바스크립트 출력확인" />
+</div>
+<p>조건문 innerCount === limit_count / 2 으로 인해 innerCount값이 4일때 loopCount 해당되는 반복문을 중단시킵니다.</p>
+<p>그래서 결과값이 innerCount 3 까지만 출력되고 반복문이 넘어가는 것입니다.</p>
+</div>
+
+<div class="box">
+  <div class="small-title">while문 과 do ~ while 문 의 차이점</div>
+{% highlight javascript %}
+// while 반복문
+while(false) {
+  console.log('조건이 거짓이면 반복 실행되지 않습니다.')
+}
+  
+// do ~ while 반복문
+do {
+  console.log('do ~ while 문의 경우 조건이 거짓이라도 1회는 실행됩니다.')
+} while(false);
+{% endhighlight %}
+<p>while 반복문 은 조건이 거짓이면 실행되지않고 반복문을 빠져나오지만</p>
+<p>do ~ while 반복문의 경우에는 조건이 거짓이라도 단 1회는 실행을 하고 반복문을 빠져나오는 차이점이 있습니다.</p>
 </div>
