@@ -21,8 +21,8 @@
  
  <div class="box">
   <p>KeyBoardEvent 실행 방법에는 구형 과 신형 방법이 있습니다.</p>
-  <p>예전 방식인 구형은 window.onkeydown = function(){}; 으로 이벤트를 조작하지만</p>
-  <p>신형 방식은 window.addEventListener('keydown', function(){}); 으로 이벤트를 실행 조작합니다.</p>
+  <p>IE 8-)예전 방식인 구형은 window.onkeydown = function(){}; 으로 이벤트를 조작하지만</p>
+  <p>IE 9+)신형 방식은 window.addEventListener('keydown', function(){}); 으로 이벤트를 실행 조작합니다.</p>
  </div>
 
 <div class="box">
@@ -166,7 +166,83 @@ function jump_remove() {
 function jump() {
   pink.classList.add('jump')
 }
+
+function moveLeft() {
+
+}
+
+function moveRight() {
+
+}
 {% endhighlight %}
 <p>자바스크립트로 해당 클레스를 추가하고 제거하는방식으로 움직임을 컨트롤 하면</p>
-<p>간단한 움직임 모션을 구현하실 수 있습니다.</p>
+<p>간단한 움직임 점프 모션을 구현하실 수 있습니다.</p>
+<p>위 아래로만 될까요?? 오른쪽 왼쪽도 한번 모션을 추가해 보도록 하겠습니다.</p>
 </div>
+
+<div class="box">
+ <p>moveLeft 함수에 기능을 추가합니다.</p>
+{% highlight javascript %}
+function moveLeft() {
+  pink.style.transform = 'translateX(-30px) rotateY(180deg)';
+}
+{% endhighlight %}
+ <p>왼쪽 방향키를 클릭했을경우 pink 박스가 왼쪽으로 30px 이동하는것을 확인합니다.</p>
+ <p>하지만 단 한번만 이동하고 그 이상 움직이지 않습니다.</p>
+ <p>그 이유는 원위치에서 30px 만큼 고정되어 움직였기때문에 그 이상 px을 추가할 수 없기 때문입니다.</p>
+ <p>고정된 30px이 아닌 추가하여 이동시키려면 현제 위치값을 가져와 더해주어서 이동시켜야 합니다.</p>
+ <p>우선 console.log() 로 pink 박스의 초기 위치값을 확인합니다.</p>
+{% highlight javascript %}
+ console.log(pink.style.transform);
+ // 결과는 "" 빈문자열 false 을 출력합니다.
+ // 이를 숫자 0 초기값으로 변환해 주어야하므로
+ console.log(pink.style.transform || 0);
+ // 으로 하여 값이 false 일경우 0이 출력 되라 라는 구문을 만듭니다.
+ // 이렇게 초기값 0 이 완성 되었습니다.
+{% endhighlight %}
+ <p>초기값을 변수에 담아 활용하도록 하겠습니다.</p>
+</div>
+
+<div class="box">
+{% highlight javascript %}
+function moveLeft() {
+  var disX = pink.style.transform || 0;
+  console.log(disX);
+  pink.style.transform = 'translateX(-30px) rotateY(180deg)';
+}
+{% endhighlight %}
+ <div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-5.png" alt="자바스크립트 출력확인" />
+</div>
+ <p>초기값 0 과 움직였을때 위치값이 출력되는것을 확인하실 수 있습니다.</p>
+ <p>이제 움직였을때 위치값의 숫자만 가져와 더해주면 되는 부분만 남았습니다.</p>
+ <p>translateX(-30px) rotateY(180deg) 값에서 숫자 -30 만 가져와 문자열을 숫자로 바꿔줘야합니다.</p>
+ <p>이때 사용하는 것이 replace() 함수 입니다.</p>
+{% highlight javascript %}
+"translateX(-30px) rotateY(180deg)".replace('translateX(','')
+ // 'translateX(' 로 시작하는 부분을 공백으로 대체한다.
+ 
+ // 결과는 -30px) rotateY(180deg)".replace('translateX(','') 의 형태가 됩니다.
+ // 이상태에서 parsInt 를 추가하여 원하는 값만 빼옵니다.
+ 
+ parseInt(-30px) rotateY(180deg)".replace('translateX(',''),10);
+ // 결과는 -30 을 정상적으로 숫자값으로 빼오는것을 확인하실 수 있습니다.
+{% endhighlight %}
+</div>
+
+<div class="box">
+{% highlight javascript %}
+function moveLeft() {
+  var disX = window.parseInt(pink.style.transform.replace('translateX(',''), 10) || 0;
+  disX -= 30;
+  // 해당 값을 계속 30씩 빼줍니다. 
+  console.log(disX);
+  pink.style.transform = 'translateX(' + disX + 'px) rotateY(180deg)';
+}
+{% endhighlight %}
+ <p>결과를 확인해보면 pink 박스는 왼쪽으로 움직이며 console.log 에는 이동한 위치값이 출력되는것을 확인하실 수 있습니다.</p>
+ <p>오른쪽 또한 똑같이 값을 주고 반대 + 를 주면 됩니다.</p>
+ </div>
+ 
+ <iframe height='265' scrolling='no' title='Keyboard  이벤트' src='//codepen.io/alalstjr/embed/PdroyW/?height=265&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/alalstjr/pen/PdroyW/'>Keyboard  이벤트</a> by alalstjr (<a href='https://codepen.io/alalstjr'>@alalstjr</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
