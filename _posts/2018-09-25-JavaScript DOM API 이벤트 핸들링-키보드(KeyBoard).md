@@ -86,7 +86,7 @@
   padding:5% 0;
   text-align:center;
 }
-#box .body {
+#box .pink {
   width:200px;
   height:200px;
   margin:0 auto;
@@ -120,4 +120,53 @@ window.addEventListener('keydown',function(e){
   <img src="{{ site.baseurl }}/static/img/post/2018-09-25-4.png" alt="자바스크립트 출력확인" />
 </div>
  <p>결과는 조건문에 맞춰서 해당키를 눌렀을경우에만 결과값이 출력되는것을 확인하실 수 있습니다.</p>
+ <p>이를 활용하여 pink 를 움직여 보도록 하겠습니다.</p>
+</div>
+
+<div class="box">
+{% highlight javascript %}
+// CSS
+.jump {
+  animation: jump 0.4s steps(2);
+}
+@keyframes flow {
+  to {
+    transform: translateX(-110vw);
+  }
+}
+@keyframes jump {
+  to {
+    transform: translateY(-10vw);
+  }
+} 
+{% endhighlight %}
+ <p>CSS 부분에 에니메이션을 추가해 줍니다. pink 박스가 뛰어 오르는듯한 모션을 css 로 추가한것입니다.</p>
+{% highlight javascript %}
+var pink = document.querySelector('.pink');
+
+window.addEventListener('keydown',function(e){
+  switch(e.keyCode){
+    case 32:
+      jump();
+      break;
+    case 37:
+      moveLeft();
+      break;
+    case 39:
+      moveRight();
+  }
+});
+
+pink.addEventListener('animationend', jump_remove);
+
+function jump_remove() {
+  pink.classList.remove('jump');
+}
+
+function jump() {
+  pink.classList.add('jump')
+}
+{% endhighlight %}
+<p>자바스크립트로 해당 클레스를 추가하고 제거하는방식으로 움직임을 컨트롤 하면</p>
+<p>간단한 움직임 모션을 구현하실 수 있습니다.</p>
 </div>
