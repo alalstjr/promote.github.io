@@ -274,3 +274,44 @@ outFor:for ( var i = 0; i < 10; ++i ) {
 </iframe>
   간단히 코드펜에서 확인해 보세요~
 </div>
+
+<div class="box">
+  <div class="small-title">for ~ in 문</div>
+  <p>배열이 아닌, 객체를 순환할 때 사용</p>
+  <p>for (variable in object) {</p>
+  <p>  statements</p>
+  <p>}</p>
+  <p>배열을 순환 처리할 수 있지만 성능 문제로 배열은</p>
+  <p>for 문을 사용하는 것이 좋다.</p>
+{% highlight javascript %}
+var object_box = {
+  name:'쭌프로',
+  type:'blog',
+  localhost:'https://alalstjr.github.io/promote.github.io/'
+}
+{% endhighlight %}
+  <p>하나의 객체를 생성하고 객체 안에는 블로그의 정보를 담았습니다.</p>
+  <p>객체를 순환 할때는 for문을 사용할 수 가없습니다.</p>
+  <p>이유는 length 속성이 존재 하지 않기때문에 총 몇개의 속성이 있는지 알수가 없습니다.</p>
+  <p>그렇기에 객체 반복문인 for ~ in 문을 사용해야합니다.</p>
+{% highlight javascript %}
+var object_box = {
+  name:'쭌프로',
+  type:'blog',
+  localhost:'https://alalstjr.github.io/promote.github.io/'
+}
+
+for (var property in object_box) {
+	console.log(property); //key 값
+}
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-13.png" alt="자바스크립트 출력확인" />
+</div>
+<p>property 값(key)을 출력하는것을 확인하실 수 있습니다.</p>
+<p>value 값을 얻고 싶다면 object_box[property] 로 확인할 수 있습니다.</p>
+<p>for ~ in 문의 활용 으로 in 을 활용하여 객체의 속성값의 존재 유무를 확인할 수도 있습니다.</p>
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-09-25-14.png" alt="자바스크립트 출력확인" />
+</div>
+</div>
