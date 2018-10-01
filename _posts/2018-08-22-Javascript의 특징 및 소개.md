@@ -5,6 +5,7 @@
   <p>하지만 지금 JavaScript의 특징 및 소개 글을 보고 있는 모두가 같은 책을 가지고 있지 않으니</p>
   <p>다른 방법으로 같은 내용의 <strong>JavaScript의 교육 문서를 볼 수 있는 자료</strong>가 필요했습니다.</p>
   <p>바로 책이 아닌 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript" target="_blank">MDN 웹 문서</a>입니다.</p>
+  <p>제가 참고한 인강에서도 추천한 사이트 입니다.</p>
   <p>Mozilla Developer Network는 개발자 및 기술 작가 커뮤니티가 관리하고 HTML5 , JavaScript , CSS , Web API , Node.js , WebExtensions 및        MathML 과 같은 다양한 주제에 대해 많은 문서를 호스팅하는 개발자를위한 리소스입니다 .</p>
 </div>
 
