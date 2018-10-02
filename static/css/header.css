@@ -17,9 +17,9 @@
 /*-font style-*/
 @font-face {
   font-family: 'NotoSans-Regular';
-  src: url('https://github.com/alalstjr/promote.github.io/static/font/NotoSans-Regular.eot');
-  src: url('https://github.com/alalstjr/promote.github.io/static/font/NotoSans-Regular.woff2') format('woff2'),
-       url('https://github.com/alalstjr/promote.github.io/static/font/NotoSans-Regular.eot?#iefix') format('embedded-opentype');
+  src: url('https://alalstjr.github.io/promote.github.io/static/font/NotoSans-Regular.eot');
+  src: url('https://alalstjr.github.io/promote.github.io/static/font/NotoSans-Regular.woff2') format('woff2'),
+       url('https://alalstjr.github.io/promote.github.io/static/font/NotoSans-Regular.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
