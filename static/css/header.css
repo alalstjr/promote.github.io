@@ -14,6 +14,18 @@
 .menu-ul .sub-ul.active {display: block;}
 .menu .menu-ul .menu-li {padding:5px 0;}
 
+/*-font style-*/
+@font-face {
+  font-family: 'NotoSans-Regular';
+  src: url('/font/NotoSans-Regular.eot');
+  src: url('/font/NotoSans-Regular.woff2') format('woff2'),
+       url('/font/NotoSans-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {font-family: 'NotoSans-Regular';}
+
 @media all and (max-width:767px){
   .menu {margin-bottom:35px;}
   #header .searchcontrol {margin-top:10px;}
