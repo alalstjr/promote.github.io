@@ -24,7 +24,7 @@
   font-style: normal;
 }
 
-p {font-family: 'NotoSans-Regular';}
+* {font-family: 'NotoSans-Regular';}
 
 @media all and (max-width:767px){
   .menu {margin-bottom:35px;}
