@@ -17,9 +17,9 @@
 /*-font style-*/
 @font-face {
   font-family: 'NotoSans-Regular';
-  src: url('/font/NotoSans-Regular.eot');
-  src: url('/font/NotoSans-Regular.woff2') format('woff2'),
-       url('/font/NotoSans-Regular.eot?#iefix') format('embedded-opentype');
+  src: url('{{ site.baseurl }}/static/font/NotoSans-Regular.eot');
+  src: url('{{ site.baseurl }}/static/font/NotoSans-Regular.woff2') format('woff2'),
+       url('{{ site.baseurl }}/static/font/NotoSans-Regular.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
