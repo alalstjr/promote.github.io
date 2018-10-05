@@ -1,5 +1,5 @@
 <div class="box">
-  <div class="small-title">JavaScript Load, DOMContentLoaded 이벤트</div>
+  <div class="small-title">JavaScript Load 이벤트</div>
   <p>HTML, CSS , JS 해석에 관련하여 정리하겠습니다.</p>
   <p>HTML의 해석 순서는 위에서 부터 아래로 해석하며 내려갑니다.</p>
   <div class="pro-txt">
@@ -51,4 +51,28 @@ window.addEventListener('load',function(){
   <p>결과는 모든 HTML의 파싱으로 이미지와 CSS, script 를 불러오는데 총 69밀리초가 소비되었습니다.</p>
   <p>(이미지가 더많거나 script 사이즈가 크면 클수록 load 시간은 길어집니다.)</p>
   <p>결론은 load 란 69밀리초가 지난 이후에 console.log 를 출력해 주세요. 라고 해석하면 될거 같습니다. </p>
+</div>
+
+<div class="box">
+	<div class="small-title">JavaScript DOMContentLoaded 이벤트</div>
+	<p>Load 이벤트는 모든 DOMContent가 불러왔을경우에 실행합니다.</p>
+	<p>서버에 요청지연되거나 혹은 이미지의 크기가 크다면 자바스크립트 실행이 늦어질 수 있습니다.</p>
+	<p>사용자가 홈페이지를 이용하려고 하는시점에 웹페이지 로딩이 늦어질경우 메뉴가 안나온다던가</p>
+	<p>웹페이지에 존재하는 여러가지 액션을 잠시동안 중단된 상탱로 있어야 합니다.</p>
+</div>
+
+<div class="box">
+	<p>DOMContentLoaded 란?</p>
+	<div class="img-box">
+	   <img src="{{ site.baseurl }}/static/img/post/2018-10-01-2.png" alt="자바스크립트 출력확인" />
+	</div>
+	<p>저의 블로그의 콘솔 Network 를 통해서 DOMContentLoaded 를 확인해보겠습니다.</p>
+	<p>첫번째 WaterFall 부분을 확인하시면 파란색 줄로 그어진곳을 경계로 왼쪽이 DOMContentLoaded 부분입니다.</p>
+	<p>HTML, CSS, JS 가 불러와지는 구역입니다.</p>
+	<p>오른쪽은 DOMContentLoaded 가 전부 불러와진 후 이미지파일 같은 기타 파일이 불러와집니다.</p>
+	<p>두번째 아래 보시면 DOMContentLoaded가 불러와진 시간은 3초이며</p>
+	<p>나머지 Load 되는 시간이 41.53초 입니다.</p>
+	<p>만약에 제 블로그에서 41초나 걸리는시간동안 자바스크립트가 실행이 안된다면</p>
+	<p>메뉴이동도 안되고 효과는 없고 사용자가 당황해할 수 있습니다.</p>
+	<p>이를 방지하기 위해 사용하는 것이 DOMContentLoaded 이벤트 입니다.</p>
 </div>
