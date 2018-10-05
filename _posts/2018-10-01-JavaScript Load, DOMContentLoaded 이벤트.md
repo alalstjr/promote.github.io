@@ -29,12 +29,15 @@
   <p>다행이 CSS link 는 HTML 파싱(해석)을 방해하지 않아 멈추지않고 내려갑니다.</p>
   <p>하지만 js 파일을 불러오는 script 코드를 마주치는 순간 HTML 파싱(해석)은 잠시 멈추게 됩니다.</p>
   <p>script 파일을 서버에 요청하고 다운로드 한후에 실행 시켜야 하기 때문입니다.</p>
-  <p>이렇게 중간에 script 파일이 HTML 파싱(해석)을 중단시키는 상황이 발생되면 어떤 문제가 일어날까요.</p>
-  <p>바로 사용자가 봐야하는 웹상의 모습이 순간 멈칫한다던가 느리게 불러오는 현상(최악의 UX)이 일어납니다.</p>
+  <p>이렇게 중간에 script 파일이 HTML 파싱(해석)을 중단시키는 상황이 발생되면</p>
+  <p>사용자가 봐야하는 웹상의 모습이 순간 멈칫한다던가 느리게 불러오는 현상(최악의 UX)이 일어납니다.</p>
 </div>
 
 <div class="box">
   <div class="small-title">HTML 파싱(해석)</div>
+  <div class="img-box">
+     <img src="{{ site.baseurl }}/static/img/post/2018-10-01-1.png" alt="자바스크립트 출력확인" />
+  </div>
   <p>HTML 파싱(해석)하는 과정에서 중간에 script 를 해석하며 불러오는 시간으로</p>
   <p>HTML 파싱(해석)이 늦어지는 현상을 해결하려면 우선</p>
   <p>모든 HTML 이 불러와진 다음에 script 를 적용시키는 것입니다.</p>
@@ -55,7 +58,7 @@ window.addEventListener('load',function(){
 
 <div class="box">
 	<div class="small-title">JavaScript DOMContentLoaded 이벤트</div>
-	<p>Load 이벤트는 모든 DOMContent가 불러왔을경우에 실행합니다.</p>
+	<p>Load 이벤트는 모든 DOMContent(이미지,기타파일)가 불러왔을경우에 실행합니다.</p>
 	<p>서버에 요청지연되거나 혹은 이미지의 크기가 크다면 자바스크립트 실행이 늦어질 수 있습니다.</p>
 	<p>사용자가 홈페이지를 이용하려고 하는시점에 웹페이지 로딩이 늦어질경우 메뉴가 안나온다던가</p>
 	<p>웹페이지에 존재하는 여러가지 액션을 잠시동안 중단된 상탱로 있어야 합니다.</p>
@@ -75,4 +78,35 @@ window.addEventListener('load',function(){
 	<p>만약에 제 블로그에서 41초나 걸리는시간동안 자바스크립트가 실행이 안된다면</p>
 	<p>메뉴이동도 안되고 효과는 없고 사용자가 당황해할 수 있습니다.</p>
 	<p>이를 방지하기 위해 사용하는 것이 DOMContentLoaded 이벤트 입니다.</p>
+</div>
+
+<div class="box">
+	<p>DOMContentLoaded 이벤트를 사용하여 스크립트를 불러오는 시간을 DOMContent 앞까지 당겨와도</p>
+	<p>DOMContent를 다운받는 시간이 길면 길어질 수록 실행은 늦어집니다.</p>
+	<p>이를 해결하기 위해서는 DOMContentLoaded 를 사용하지않고 스크립트 배치 위치만 바꿔주면 됩니다.</p>
+	{% highlight javascript %}
+	<!DOCTYPE html>
+	<html lang="ko-KR">
+	  <head>
+	  <meta charset="UTF-8">
+	  <title>Javascript Slide Example</title>
+	  <link rel="stylesheet" href="link">
+	  </head>
+	    <body>
+	      <header>
+		<div class="JJun">쭌프로</div>
+		  <div>블로그</div>
+		</header>
+		<script src="link_1"></script>
+		<script src="link_2"></script>
+	    </body>
+	</html>
+	{% endhighlight %}
+	<p>script 불러오는 위치를 body 끝부분 바로 위에서 불러오는것입니다.</p>
+	<p>이렇게 되면 웹에 다운받고 실행시킬 준비가 되어 있는 상태가 되어 lose time 없이 바로 실행시킬 수 있습니다.</p>
+</div>
+
+<div class="box">
+	<p>JavaScript Load 이벤트는 이미지와 기타 파일들을 모두 로드한 이후에 실행합니다.</p>
+	<p>JavaScript DOMContentLoaded 이벤트는 문서객체구조가 완성되면 실행합니다.</p>
 </div>
