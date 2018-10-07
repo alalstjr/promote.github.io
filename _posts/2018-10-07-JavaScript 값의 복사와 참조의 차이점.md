@@ -33,20 +33,12 @@ val +=100
 {% highlight javascript %}
 var blog = {
     name:'쭌프로의 개발노트',
-    year:'2018-10-07,
+    year:'2018-10-07',
     list:['자바스크립트','파이썬','자바','C언어'],
     action: function() {
         console.log('함수입니다.')
     }
 };
-
-var list = [
-    '사과',
-    '포도',
-    '딸기',
-    '배'
-];
-
 // blog 의 정보를 담고있는 객체를 변수(new_val)를 만들어 할당했습니다.
 var new_val = blog;
 {% endhighlight %}
@@ -61,4 +53,26 @@ var new_val = blog;
 <div class="img-box">
   <img src="{{ site.baseurl }}/static/img/post/2018-10-07-2.png" alt="자바스크립트 출력확인" />
 </div>
+<p>값이 동일하게 바뀌는 것을 확인하실 수 있습니다.</p>
+</div>
+
+<div class="box">
+ <p>만약에 객체에 담긴 값을 변수에 할당하여 수정한다면 어떻게 될까요?</p>
+  <p>변수 val 값에 blog.name 값을 담았습니다.</p>
+  <p>이런경우 blog는 객체이지만 name 값에 담긴 속성값은 string 인 불변 데이터값 입니다.</p>
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-10-07-3.png" alt="자바스크립트 출력확인" />
+</div>
+  <p>변수 val 값을 변경하더라도 blog 값은 변경되지 않습니다.</p>
+</div>
+
+<div class="box">
+  <p>객체, 배열, 함수도 값을 복사할 수 있습니다.</p>
+  <p>배열의값을 복사하는 방법으로 for문을 활용하는것 입니다.</p>
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-10-07-4.png" alt="자바스크립트 출력확인" />
+</div>
+  <p>for문으로 만들어진 배열을 담은 변수와 기존의 변수를 비교했을때 false 로 둘이 다르다는것을 확인함으로서</p>
+  <p>값이 복사되어 만들어진것을 확인할 수 있습니다.</p>
+  <p>객체또한 for in 문으로 복사할 수 있습니다.</p>
 </div>
