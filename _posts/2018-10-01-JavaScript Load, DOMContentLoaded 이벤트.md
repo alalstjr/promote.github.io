@@ -131,11 +131,11 @@ window.addEventListener('load',function(){
 	  <p>동기방식은 설계가 매우 간단하고 직관적이지만 결과가 주어질 때까지 아무것도 못하고 대기해야 하는 단점</p>
 	  <p>비동기적 일처리 방식 : 해야 할 일을 위임하고 기다리는 방식</p>
 	  <p>동기보다 복잡하지만 결과가 주어지는데 시간이 걸리더라도 그 시간 동안 다른 작업을 할 수 있으므로 자원을 효율적으로 사용</p>
+	</div>
 	  <div class="img-box">
 	     <img src="{{ site.baseurl }}/static/img/post/2018-10-01-5.png" alt="자바스크립트 출력확인" />
 	  </div>
 	  <p>비동기 속성으로 인해 웹페이지가 불러와 지는 동안에 script 도 같이 불러옵니다.</p>
-	</div>
 </div>
 
 <div class="box">
