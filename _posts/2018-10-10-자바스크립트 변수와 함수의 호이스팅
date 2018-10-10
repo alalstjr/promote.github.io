@@ -1,0 +1,59 @@
+<div class="box">
+  <div class="small-title">변수 와 함수 의 호이스팅(Hoistiong)</div>
+  <p>호이스팅은 ECMAScript 2015 언어 이전 표준 명세에서 사용된 적이 없는 표준에 존재하지 않는 용어입니다.</p>
+  <p>혼동 하시면 안됩니다. 많은 이용자들이 호이스팅이라 불러서 붙여진 이름입니다.</p>
+</div>
+
+<div class="box">
+{% highlight javascript %}
+// 변수의 선언과 변수의 초기화
+var jjun = '쭌프로 변수';
+
+// 함수의 선언
+function jjun_box() {
+  console.log('쭌프로 함수')
+}
+
+// 변수를 출력
+console.log(jjun);
+
+// 함수를 실행
+jjun_box();
+{% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-10-10-1.png" alt="자바스크립트 출력확인" />
+</div>
+<p>변수와 함수의 값이 모두 출력되는것을 확인할 수 있습니다.</p>
+<p>그리고 다음 변수와 함수를 새로 만든다음에 함수의 실행과 변수 출력문을</p>
+<p>변수와 함수의 선언보다 위에 배치시켜 실행시킵니다.</p>
+{% highlight javascript %}
+// 변수를 출력
+console.log(jjun_s);
+
+// 함수를 실행
+jjun_box_s();
+
+// 변수의 선언과 변수의 초기화
+var jjun_s = '쭌s프로 변수';
+
+// 함수의 선언
+function jjun_box_s() {
+  console.log('쭌s프로 함수')
+}
+{% endhighlight %}
+  <p>결과를 확인하기 전에 코드를 한번 읽어보고 생각을 해봅니다.</p>
+  <p>변수와 함수가 선언되기 이전에 함수와 변수를 실행시키며 출력시킬 수 있을것인가</p>
+  <p>프로그래밍 적으로 생각한다면 변수와 함수가 선언되기 이전에 실행을 시키면 오류가 난다고 생각할것입니다.</p>
+  <div class="img-box">
+    <img src="{{ site.baseurl }}/static/img/post/2018-10-10-2.png" alt="자바스크립트 출력확인" />
+  </div>
+  <p>결과는 변수 jjun_s 값을 undefined 를 출력하며 값을 찾을 수 없다고 출력하며</p>
+  <p>함수 jjun_box_s 를 실행시켜 '쭌s프로 함수'를 출력하는 것을 확인할 수 있습니다.</p>
+  <p>결과가 이렇게 출력되는 이유는</p>
+  <p>자바스크립트에는 실행 컨텍스트(Execution context) 가 존재합니다. 실행되는 공간입니다.</p>
+  <p>실행 컨텍스트에서 작성한 코드는 사람이 이해하기 쉽도록 작성되어 있습니다.</p>
+  <p>실행 컨텍스트에서 작성된 코드가 브라우저에서 (아우터 인바러먼트)를 통해서 해석을 할때는 컴퓨터 언어로 바뀝니다.</p>
+  <p>컴퓨터 언어로 변환 처리하는동안 <strong>변수의 선언 부분(var jjun_s)과 함수의 선언부분(function jjun_box_s())을 먼저 메모리에 저장</strong>합니다.</p>
+  <p>메모리에는 변수 선언 부분인 var jjun_s 존재하지만 값은 저장이 안되어 있기 때문에 undefined 를 출력하며</p>
+  <p>메모리에는 함수 선언 부분인 function jjun_box_s() 전체가 저장되어 있기때문에 함수를 실행시킬 수 있습니다.</p>
+</div>
