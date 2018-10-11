@@ -165,3 +165,24 @@ $('form').oninput = function () {
 	<p>function sum() {} 함수를 담아 form.oninput = sum; 직접 연결하여 실행할 수 있으며 </p>
 	<p>$('form').oninput = function () {} 직접 'form' 에 함수를 담아 바로 실행하는 방법도 있습니다.</p>
 </div>
+
+<div class="box">
+	<div class="title-box">addEventListener click 이벤트</div>
+	<p>전달인자가 따로 필요없는경우</p>
+{% highlight javascript %}
+target.addEventListener('click',value);
+function index() {
+	console.log('출력합니다.');
+}
+{% endhighlight %}
+	
+<p>전달인자를 클릭 이벤트 함수에 넣을경우 function() 작성해서 넣어야합니다.</p>
+{% highlight javascript %}
+var value = '전달인자값';
+target.addEventListener('click',function(){ index(value) });
+function index(value) {
+	// 전달인자를 출력합니다.
+	console.log(value);
+}
+{% endhighlight %}
+</div>
