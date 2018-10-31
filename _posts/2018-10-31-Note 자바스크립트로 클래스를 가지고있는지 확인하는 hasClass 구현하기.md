@@ -126,4 +126,80 @@ for(var i = 0; i < _hc.listLi.length; ++i){
 	_hc.listLi[i].addEventListener('click',_hc.listFunction);
 }	
 {% endhighlight %}
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-10-31-5.png" alt="자바스크립트 출력확인" />
+</div>
+<p>if( this.classList == 'active' ) 조건문을 활용하여 클릭한 대상의 classList 배열의</p>
+<p>active 클래스 존재 유무를 파악하여 참이면 참의 값을 거짓이면 거짓의 값을 출력하였습니다.</p>
+</div>
+
+<div class="box">
+	<p>만약에 대상의 클래스가 하나가 아닌 두개 이상이여도 확인 가능할것인가?</p>
+	<p>for문 반복문을 사용하여 해당 클래스가 있다면 멈추고 ture 를 반환하게 하면 됩니다.</p>
+{% highlight javascript %}
+<ol>
+  <li>첫번째 클릭을 해주세요!</li>
+  <li>두번째 클릭을 해주세요!</li>
+  <li class="boom active shoot">세번째 클릭을 해주세요!</li>
+  <li>네번째 클릭을 해주세요!</li>
+  <li>다섯번째 클릭을 해주세요!</li>
+  <li>여섯번째 클릭을 해주세요!</li>
+  <li>일곱번째 클릭을 해주세요!</li>
+</ol>
+	
+<script>
+// _hc 라는 독립적인 구역을 만들었습니다.
+var _hc 		 = [];
+
+_hc.listLi 		 = document.getElementsByTagName('li');
+_hc.listFunction = function(){
+	if( this.classList == 'active' ) console.log('active 클래스를 가지고 있습니다.');
+	else console.log('클래스가 없습니다.');
+}
+
+for(var i = 0; i < _hc.listLi.length; ++i){
+	_hc.listLi[i].addEventListener('click',_hc.listFunction);
+}	
+</script>
+{% endhighlight %}
+<p>세번째 li의 클래스가 여러개가 있을경우 위 코드를 실행하면</p>
+<div class="img-box">
+  <img src="{{ site.baseurl }}/static/img/post/2018-10-31-5.png" alt="자바스크립트 출력확인" />
+</div>
+<p>세번째에 active 클래스가 있음에도 조건문에서는 거짓으로 판별하여 넘겨버립니다.</p>
+<p>classList 에서 active 클래스를 못찾는 이유는 classList의 클래스는 배열로 저장되어 있기 때문입니다.</p>
+<p>해당 조건문에서 반복문을 사용하여 classList의 리스트를 돌면서 값이 있는지 여부를 확인하여 참인지 거짓인지 판별해야 합니다.</p>
+</div>
+
+<div class="box">
+{% highlight javascript %}
+// _hc 라는 독립적인 구역을 만들었습니다.
+var _hc 		  = [];
+
+_hc.listLi 		  = document.getElementsByTagName('li');
+_hc.listFunction  = function(){
+	// 스위치 변수를 하나 만들어 줍니다.
+	_hc.listCheck = false;
+	for(var i = 0; i < this.classList.length; ++i){
+		if( this.classList[i] == 'active' ) {
+			// 클릭한 대상의 classList 에 active 가 존재한다면 true 를 반환합니다.
+			_hc.listCheck = true;
+			break;
+		}
+	}	
+	
+	if( _hc.listCheck === true ) console.log('active 클래스를 가지고 있습니다.');
+	else console.log('클래스가 없습니다.');
+}
+
+for(var i = 0; i < _hc.listLi.length; ++i){
+	_hc.listLi[i].addEventListener('click',_hc.listFunction);
+}	
+{% endhighlight %}
+<p>조건문과 반복문을 제어하는 스위치 변수인 _hc.listCheck = false; 를 하나 지정해 둡니다.</p>
+<p>그리고 반복문으로 this.classList.length 만큼 해당 li의 this.classList 를 돕니다.</p>
+<p>만약에 해당 classList 에 active 값이 '존재한다' 면 스위치 변수인 _hc.listCheck 는 true 를 반환하고 반복문을 빠져 나갑니다.</p>
+<p>만약 대상이  classList 에 active 값이 '존재하지 않는다' 면 다시한번 반복문을 실행합니다.</p>
+<p>이런식으로 사용자가 원하는 클래스를 가진 대상을 찾는 방법 이였습니다.</p>
+<p>좀더 줄일수 있지 않을까 항상 생각하지만 쉽지 않네요..</p>
 </div>
