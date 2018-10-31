@@ -203,3 +203,6 @@ for(var i = 0; i < _hc.listLi.length; ++i){
 <p>이런식으로 사용자가 원하는 클래스를 가진 대상을 찾는 방법 이였습니다.</p>
 <p>좀더 줄일수 있지 않을까 항상 생각하지만 쉽지 않네요..</p>
 </div>
+
+<iframe height='265' scrolling='no' title='hasClass 구현하기' src='//codepen.io/alalstjr/embed/ePwQLO/?height=265&theme-id=0&default-tab=js,result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/alalstjr/pen/ePwQLO/'>hasClass 구현하기</a> by alalstjr (<a href='https://codepen.io/alalstjr'>@alalstjr</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
