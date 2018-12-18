@@ -29,7 +29,7 @@ title: Blog
         <li class="previous disabled"><span aria-hidden="true">&laquo;</span></li>
       {% endif %}
 
-      <li><a href="/">First</a></li>
+      <li><a href="/promote.github.io">First</a></li>
 
       {% for page in (1..paginator.total_pages) %}
         {% if page == paginator.page %}
@@ -37,7 +37,7 @@ title: Blog
              <a>{{ page }}<span class="sr-only">(current)</span></a>
           </li>
         {% elsif page == 1 %}
-          <li><a href="/">{{ page }}</a></li>
+          <li><a href="/promote.github.io">{{ page }}</a></li>
         {% else %}
           <li>
               <a href="/promote.github.io{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
