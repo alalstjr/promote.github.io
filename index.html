@@ -23,7 +23,7 @@ title: Blog
     <ul class="pager">
       {% if paginator.previous_page %}
         <li class="previous">
-          <a href="{{ prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
         </li>
       {% else %}
         <li class="previous disabled"><span aria-hidden="true">&laquo;</span></li>
