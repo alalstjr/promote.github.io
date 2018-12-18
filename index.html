@@ -23,7 +23,7 @@ title: Blog
     <ul class="pager">
       {% if paginator.previous_page %}
         <li class="previous">
-          <a href="{{  prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
         </li>
       {% else %}
         <li class="previous disabled"><span aria-hidden="true">&laquo;</span></li>
@@ -40,7 +40,7 @@ title: Blog
           <li><a href="/">{{ page }}</a></li>
         {% else %}
           <li>
-            <a href="{{ prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
           </li>
         {% endif %}
       {% endfor %}
@@ -49,7 +49,7 @@ title: Blog
 
       {% if paginator.next_page %}
         <li class="next">
-          <a href="{{ prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
         </li>
       {% else %}
         <li class="next disabled"><span>&raquo;</span></li>
