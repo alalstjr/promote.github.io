@@ -40,7 +40,7 @@ title: Blog
           <li><a href="/">{{ page }}</a></li>
         {% else %}
           <li>
-            <a href="promote.github.io{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            <a href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
           </li>
         {% endif %}
       {% endfor %}
