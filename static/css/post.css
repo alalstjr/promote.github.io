@@ -13,6 +13,9 @@
 .pro-txt {padding: 16px;overflow: auto;font-size: 85%;line-height: 1.45;background-color: #f6f8fa; border-radius: 3px;margin:10px 0;} 
 .pro-txt p:last-child {margin:0;}
   
+/*스크립트 틀 css*/
+.colorscripter-code table { width:100%; }
+
 @media all and (max-width:480px){
   .post .title {font-size:26px;}
 }
