@@ -33,7 +33,9 @@
     <a href="https://babeljs.io/docs/en/babel-polyfill" target="_balnk">npm install --save @babel/polyfill</a>
   </div>
   <p>@babel/polyfill를 설치해 주시고 설정위치는</p>
-  <p>2019년 1월 기준 create-react-app 기준 config/webpack.config.js 에서 entry 배열 내부에 "@babel/polyfill" 를 추가하시면 됩니다.</p>
+  <p>2019년 1월 기준 create-react-app 기준 config/webpack.config.js 에서 entry 배열 내부에 "@babel/polyfill", "./app/js" 를 추가하시면 됩니다.</p>
+  <p>./app/js 란 ReactDOM render하는 js 파일입니다.</p>
+  <p>예를 들어 저같은 경우 App 을 렌더링 하는곳이 ./src/index.js 라서 이곳으로 설정하였습니다.</p>
   <div class="img-box">
     <img src="{{ site.baseurl }}/static/img/post/2019-1-26-3.png" alt="자바스크립트 출력확인" />
   </div>
